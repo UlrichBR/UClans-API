@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>me.ulrich.clans</groupId>
   <artifactId>Clans</artifactId>
-  <version>8.0.0-R2</version>
+  <version>8.0.0-R4</version>
   <name>UClansV8-API</name>
 
 	<properties>
@@ -122,12 +122,6 @@
 			<version>3.1.7</version>
 			<scope>provided</scope>
 		</dependency>
-    <dependency>
-        <groupId>com.github.openjson</groupId>
-        <artifactId>openjson</artifactId>
-        <version>1.0.12</version>
-        <scope>provided</scope>
-    </dependency>
 	</dependencies>
 
 </project>
