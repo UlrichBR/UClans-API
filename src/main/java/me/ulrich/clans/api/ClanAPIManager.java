@@ -10,7 +10,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import com.github.openjson.JSONObject;
 
 import me.ulrich.clans.Clans;
 import me.ulrich.clans.data.ClanData;
@@ -209,11 +208,11 @@ public class ClanAPIManager implements ClanAPI {
 		return false;
 	}
 
-	public boolean setJsonMeta(UUID clanUUID, JSONObject jsonMeta) {
+	public boolean setJsonMeta(UUID clanUUID, String jsonMeta) {
 		return false;
 	}
 	
-	public Optional<JSONObject> getJsonMeta(UUID clanUUID) {
+	public Optional<String> getJsonMeta(UUID clanUUID) {
 		return Optional.empty();
 	}
 	
