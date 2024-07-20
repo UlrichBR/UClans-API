@@ -2,7 +2,8 @@ package me.ulrich.clans.data;
 
 import java.util.Optional;
 
-import org.json.JSONObject;
+import com.github.openjson.JSONObject;
+
 
 public class SettingsData {
 
