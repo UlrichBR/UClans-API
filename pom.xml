@@ -2,8 +2,8 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>me.ulrich.clans</groupId>
   <artifactId>Clans</artifactId>
-  <version>8.0.0</version>
-  <name>UClansV7-API</name>
+  <version>8.0.0-R2</version>
+  <name>UClansV8-API</name>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -122,13 +122,13 @@
 			<version>3.1.7</version>
 			<scope>provided</scope>
 		</dependency>
-		<!--JSON -->
-		<dependency>
-			<groupId>com.github.stleary</groupId>
-			<artifactId>JSON-java</artifactId>
-			<version>20220320</version>
-			<scope>provided</scope>
-		</dependency>
+<!-- https://mvnrepository.com/artifact/org.json/json -->
+<dependency>
+    <groupId>org.json</groupId>
+    <artifactId>json</artifactId>
+    <version>20240303</version>
+    <scope>provided</scope>
+</dependency>
 	</dependencies>
 
 </project>
