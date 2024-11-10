@@ -21,6 +21,7 @@ import me.ulrich.clans.api.ModerationAPIManager;
 import me.ulrich.clans.api.MoneyAPIManager;
 import me.ulrich.clans.api.PlayerAPIManager;
 import me.ulrich.clans.api.RegionAPIManager;
+import me.ulrich.clans.api.RewardsAPIManager;
 import me.ulrich.clans.api.ScoreboardAPIManager;
 import me.ulrich.clans.api.SyncAPIManager;
 import me.ulrich.clans.data.Addon;
@@ -52,6 +53,7 @@ public final class Clans extends JavaPlugin implements UClans{
 	private final MapAPIManager mapAPI;
 	private final ScoreboardAPIManager scoreboardAPI;
 	private final GuiAPIManager guiAPI;
+	private RewardsAPIManager rewardsAPI;
 
 	public Clans() {
 		this.ClanAPI = new ClanAPIManager(this);
@@ -73,6 +75,7 @@ public final class Clans extends JavaPlugin implements UClans{
 		this.mapAPI = new MapAPIManager(this);
 		this.scoreboardAPI = new ScoreboardAPIManager(this);
 		this.guiAPI = new GuiAPIManager(this);
+		this.rewardsAPI = new RewardsAPIManager(this);
 
 
 	}
@@ -189,6 +192,10 @@ public final class Clans extends JavaPlugin implements UClans{
 	}
 	
 	public GuiAPIManager getGuiAPI() {
+		return null;
+	}
+
+	public RewardsAPIManager getRewardsAPI() {
 		return null;
 	}
 
