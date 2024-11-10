@@ -9,7 +9,6 @@ import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.json.JSONObject;
 
 import me.ulrich.clans.data.ClanData;
 import me.ulrich.clans.data.EncodedLocationData;
@@ -174,8 +173,6 @@ public interface ClanAPI {
 	boolean isGlobalFF();
 
 	boolean setJsonMeta(UUID clanUUID, String jsonMetaString);
-
-	boolean setJsonMeta(UUID clanUUID, JSONObject jsonMeta);
 
 	Optional<String> getJsonMeta(UUID clanUUID);
 
