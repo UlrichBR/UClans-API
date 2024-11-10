@@ -19,6 +19,8 @@ import me.ulrich.clans.api.ModerationAPIManager;
 import me.ulrich.clans.api.MoneyAPIManager;
 import me.ulrich.clans.api.PlayerAPIManager;
 import me.ulrich.clans.api.RegionAPIManager;
+import me.ulrich.clans.api.RewardsAPIManager;
+import me.ulrich.clans.api.ScoreboardAPIManager;
 import me.ulrich.clans.api.SyncAPIManager;
 
 public interface UClans {
@@ -28,8 +30,6 @@ public interface UClans {
 	ClanAPIManager getClanAPI();
 
 	PlayerAPIManager getPlayerAPI();
-	
-	MoneyAPIManager getMoneyAPI();
 	
 	HooksAPIManager getHooksAPI();
 	
@@ -51,6 +51,8 @@ public interface UClans {
 	
 	SyncAPIManager getSyncAPI();
 	
+	MoneyAPIManager getMoneyAPI();
+
 	ClaimAPIManager getClaimAPI();
 	
 	RegionAPIManager getRegionAPI();
@@ -58,6 +60,10 @@ public interface UClans {
 	HologramAPIManager getHologramAPI();
 	
 	MapAPIManager getMapAPI();
+	
+	ScoreboardAPIManager getScoreboardAPI();
+
+	RewardsAPIManager getRewardsAPI();
 	
 	GuiAPIManager getGuiAPI();
 
