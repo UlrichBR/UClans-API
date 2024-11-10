@@ -482,11 +482,6 @@ public class ClanAPIManager implements ClanAPI {
 	}
 
 	@Override
-	public boolean setJsonMeta(UUID clanUUID, JSONObject jsonMeta) {
-		return false;
-	}
-
-	@Override
 	public Optional<String> getJsonMeta(UUID clanUUID) {
 		return Optional.empty();
 	}
