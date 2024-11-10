@@ -9,7 +9,6 @@ import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.json.JSONObject;
 
 import me.ulrich.clans.Clans;
 import me.ulrich.clans.data.ClanData;
