@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>me.ulrich.clans</groupId>
   <artifactId>Clans</artifactId>
-  <version>8.0.0-R10</version>
+  <version>8.3.0</version>
   <name>UClans-API</name>
 
 	<properties>
@@ -121,6 +121,14 @@
 			<artifactId>triumph-gui</artifactId>
 			<version>3.1.7</version>
 			<scope>provided</scope>
+		</dependency>
+				<dependency>
+			<groupId>EntityWizard</groupId>
+			<artifactId>EntityWizard</artifactId>
+			<scope>system</scope>
+			<version>1.0</version>
+			<systemPath>
+				D:/workspace-libs/EntityWizard-1.0.0.jar</systemPath>
 		</dependency>
 	</dependencies>
 
