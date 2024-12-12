@@ -8,6 +8,7 @@ import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
 import me.ulrich.clans.Clans;
+import me.ulrich.clans.data.EntityOptionsData;
 import me.ulrich.clans.data.SpawnedEntityData;
 import me.ulrich.clans.interfaces.EntityAPI;
 import me.ulrich.entitywizard.entitylib.wrapper.WrapperEntity;
@@ -56,25 +57,7 @@ public class EntityAPIManager implements EntityAPI {
 		return false;
 	}
 
-	@Override
-	public void createEntityMeta(WrapperEntity entity, EntityType entityType, boolean baby) {
-		
-		
-	}
 
-	@Override
-	public Optional<SpawnedEntityData> createEntity(Player player, Location location, EntityType entityType,
-			boolean baby, boolean glowing, boolean invisible, List<Equipment> equipament, List<Player> viewers) {
-		
-		return Optional.empty();
-	}
-
-	@Override
-	public Optional<WrapperEntity> createCustomMetaEntity(EntityType type,
-			me.ulrich.entitywizard.packetevents.protocol.world.Location spawnLocation) {
-		
-		return Optional.empty();
-	}
 
 	@Override
 	public void entitySetViews(int entityID, List<Player> viewers) {
@@ -179,6 +162,23 @@ public class EntityAPIManager implements EntityAPI {
 	public Vector3d calculateVelocity(Vector3d from, Vector3d to, int heightGain) {
 		
 		return null;
+	}
+
+	@Override
+	public void createEntityMeta(WrapperEntity entity, EntityType entityType, EntityOptionsData optionsData) {
+		
+	}
+
+	@Override
+	public Optional<SpawnedEntityData> createEntity(Player player, Location location, EntityType entityType,
+			EntityOptionsData optionsData, List<Equipment> equipament, List<Player> viewers) {
+		return Optional.empty();
+	}
+
+	@Override
+	public Optional<WrapperEntity> createCustomMetaEntity(EntityType type, EntityOptionsData optionsData,
+			me.ulrich.entitywizard.packetevents.protocol.world.Location spawnLocation) {
+		return Optional.empty();
 	}
 
 }
