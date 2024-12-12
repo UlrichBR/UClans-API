@@ -7,6 +7,7 @@ import java.util.UUID;
 import org.bukkit.entity.Player;
 
 import me.ulrich.clans.Clans;
+import me.ulrich.clans.data.EntityOptionsData;
 import me.ulrich.clans.data.SpawnedEntityData;
 import me.ulrich.entitywizard.entitylib.wrapper.WrapperEntity;
 import me.ulrich.entitywizard.packetevents.protocol.entity.type.EntityType;
@@ -24,9 +25,9 @@ public interface EntityAPI {
 	boolean isMob(EntityType entityType);
 	boolean isAbstractEntity(EntityType entityType);
 	boolean isItem(EntityType entityType);
-	void createEntityMeta(WrapperEntity entity, EntityType entityType, boolean baby);
-	Optional<SpawnedEntityData> createEntity(Player player, org.bukkit.Location location, EntityType entityType, boolean baby, boolean glowing, boolean invisible, List<Equipment> equipament, List<Player> viewers);
-	Optional<WrapperEntity> createCustomMetaEntity(EntityType type, Location spawnLocation);
+	void createEntityMeta(WrapperEntity entity, EntityType entityType, EntityOptionsData optionsData);
+	Optional<SpawnedEntityData> createEntity(Player player, org.bukkit.Location location, EntityType entityType, EntityOptionsData optionsData, List<Equipment> equipament, List<Player> viewers);
+	Optional<WrapperEntity> createCustomMetaEntity(EntityType type, EntityOptionsData optionsData, Location spawnLocation);
 	void entitySetViews(int entityID, List<Player> viewers);
 	void entitySetViewsUUID(int entityID, List<UUID> viewers);
 	void entitySetViewDistance(int entityID, int distance);
