@@ -30,6 +30,10 @@ public interface EntityAPI {
 	Optional<WrapperEntity> createCustomMetaEntity(EntityType type, EntityOptionsData optionsData, Location spawnLocation);
 	void entitySetViews(int entityID, List<Player> viewers);
 	void entitySetViewsUUID(int entityID, List<UUID> viewers);
+	void entityAddView(int entityID, Player player);
+	void entityAddView(int entityID, UUID playerUUID);
+	void entityRemoveView(int entityID, Player player);
+	void entityRemoveView(int entityID, UUID playerUUID);
 	void entitySetViewDistance(int entityID, int distance);
 	void entitySetInvisible(int entityID, boolean invisible);
 	void entitySetGlowing(int entityID, boolean glowing);
