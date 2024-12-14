@@ -181,4 +181,24 @@ public class EntityAPIManager implements EntityAPI {
 		return Optional.empty();
 	}
 
+	@Override
+	public void entityAddView(int entityID, Player player) {
+		
+	}
+
+	@Override
+	public void entityAddView(int entityID, UUID playerUUID) {
+		
+	}
+
+	@Override
+	public void entityRemoveView(int entityID, Player player) {
+		
+	}
+
+	@Override
+	public void entityRemoveView(int entityID, UUID playerUUID) {
+		
+	}
+
 }
