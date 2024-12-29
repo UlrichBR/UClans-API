@@ -1,6 +1,7 @@
 package me.ulrich.clans.api;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -142,6 +143,26 @@ public class LibAPIManager implements LibAPI {
 	@Override
 	public void resetTitle(Player p) {
 		
+	}
+
+	@Override
+	public boolean playSoundForAll(String sound) {
+		return false;
+	}
+
+	@Override
+	public void playSoundForAll(List<String> sounds) {
+		
+	}
+
+	@Override
+	public boolean playSound(Player p, List<String> sounds) {
+		return false;
+	}
+
+	@Override
+	public boolean playSound(Player p, String sound) {
+		return false;
 	}
 
 }
