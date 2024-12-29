@@ -1,6 +1,7 @@
 package me.ulrich.clans.interfaces;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -59,6 +60,14 @@ public interface LibAPI {
 	HashMap<UUID, MyScheduledTask> getBossbarTasks();
 	
 	HashMap<UUID, MyScheduledTask> getLibTasks();
+
+	boolean playSoundForAll(String sound);
+
+	void playSoundForAll(List<String> sounds);
+
+	boolean playSound(Player p, List<String> sounds);
+
+	boolean playSound(Player p, String sound);
 
 	
 	
