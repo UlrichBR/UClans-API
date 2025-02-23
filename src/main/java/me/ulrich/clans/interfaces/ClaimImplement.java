@@ -1,8 +1,10 @@
 package me.ulrich.clans.interfaces;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+import org.bukkit.Chunk;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
@@ -17,6 +19,8 @@ public interface ClaimImplement {
 	Optional<UUID> getClaimOwner(Location location);
 
 	Location[] getClaimCornersLocation(Player player, Location location);
+	
+	List<Chunk> getClaimChunksLocation(Player player, Location location);
 
 	boolean canDestroyClaimLocation(Player player, Location location);
 	
