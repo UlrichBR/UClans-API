@@ -8,6 +8,8 @@ import me.ulrich.clans.api.ClaimAPIManager;
 import me.ulrich.clans.api.ClanAPIManager;
 import me.ulrich.clans.api.CommandAPIManager;
 import me.ulrich.clans.api.DiscordAPIManager;
+import me.ulrich.clans.api.EntityAPIManager;
+import me.ulrich.clans.api.EventAPIManager;
 import me.ulrich.clans.api.GuiAPIManager;
 import me.ulrich.clans.api.HologramAPIManager;
 import me.ulrich.clans.api.HooksAPIManager;
@@ -55,6 +57,8 @@ public interface UClans {
 
 	ClaimAPIManager getClaimAPI();
 	
+	EventAPIManager getEventAPI();
+	
 	RegionAPIManager getRegionAPI();
 
 	HologramAPIManager getHologramAPI();
@@ -64,6 +68,8 @@ public interface UClans {
 	ScoreboardAPIManager getScoreboardAPI();
 
 	RewardsAPIManager getRewardsAPI();
+	
+	EntityAPIManager getEntityAPI();
 	
 	GuiAPIManager getGuiAPI();
 
