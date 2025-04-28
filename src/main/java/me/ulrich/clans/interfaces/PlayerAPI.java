@@ -79,6 +79,8 @@ public interface PlayerAPI {
 	Optional<PlayerData> checkPlayerData(Player player);
 
 	Optional<PlayerData> checkPlayerData(UUID player);
+	
+	Optional<PlayerData> checkPlayerData(UUID player, String name);
 
 	boolean removePlayerData(UUID uuid);
 
