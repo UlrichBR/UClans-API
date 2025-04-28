@@ -308,5 +308,12 @@ public class PlayerAPIManager implements PlayerAPI {
 		
 	}
 
+
+	@Override
+	public Optional<PlayerData> checkPlayerData(UUID player, String name) {
+		// TODO Auto-generated method stub
+		return Optional.empty();
+	}
+
 	
 }
