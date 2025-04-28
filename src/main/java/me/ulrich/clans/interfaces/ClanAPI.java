@@ -111,6 +111,8 @@ public interface ClanAPI {
 	boolean deletePlayerClan(UUID player);
 
 	Optional<ClanData> createNewClan(Player player, String tag, String desc, long date);
+	
+	Optional<ClanData> createNewClan(UUID player, String tag, String desc, long date);
 
 	void teleportDelay(Player player, Optional<EncodedLocationData> encodedLocation, boolean checkcooldown);
 
