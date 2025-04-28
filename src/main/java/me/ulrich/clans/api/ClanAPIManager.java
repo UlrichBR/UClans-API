@@ -485,6 +485,12 @@ public class ClanAPIManager implements ClanAPI {
 		return Optional.empty();
 	}
 
+	@Override
+	public Optional<ClanData> createNewClan(UUID player, String tag, String desc, long date) {
+		// TODO Auto-generated method stub
+		return Optional.empty();
+	}
+
 	
 	
 }
