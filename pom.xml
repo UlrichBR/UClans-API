@@ -128,13 +128,6 @@
 	    <version>1.0.0</version>
 	    <scope>provided</scope>
 	</dependency>
-		<!--JSON -->
-		<dependency>
-			<groupId>com.github.stleary</groupId>
-			<artifactId>JSON-java</artifactId>
-			<version>20220320</version>
-			<scope>provided</scope>
-		</dependency>
 	</dependencies>
 
 </project>
