@@ -1,5 +1,9 @@
 package me.ulrich.clans.data;
 
+import java.util.Optional;
+
+import org.json.JSONObject;
+
 public class SettingsData {
 
 	private boolean warInvite;
@@ -8,14 +12,20 @@ public class SettingsData {
 	private boolean allySharedHome;
 	private boolean opened;
 	private boolean publicHomes;
+	private boolean receveMailAllies;
+	private boolean receiveMailAll;
+	private Optional<JSONObject> jsonMeta;
 
-	public SettingsData(boolean warInvite, boolean allySharedChat, boolean joinLeave, boolean allySharedHome, boolean opened, boolean publicHomes) {
+	public SettingsData(Optional<JSONObject> jsonMeta, boolean warInvite, boolean allySharedChat, boolean joinLeave, boolean allySharedHome, boolean opened, boolean publicHomes, boolean receveMailAllies, boolean receiveMailAll) {
 		this.setWarInvite(warInvite);
 		this.setAllySharedChat(allySharedChat);
 		this.setJoinLeave(joinLeave);
 		this.setAllySharedHome(allySharedHome);
 		this.setOpened(opened);
 		this.setPublicHomes(publicHomes);
+		this.setReceveMailAllies(receveMailAllies);
+		this.setReceiveMailAll(receiveMailAll);
+		this.setJsonMeta(jsonMeta);
 
 	}
 
@@ -66,5 +76,29 @@ public class SettingsData {
 
 	public void setPublicHomes(boolean publicHomes) {
 		this.publicHomes = publicHomes;
+	}
+
+	public boolean isReceveMailAllies() {
+		return receveMailAllies;
+	}
+
+	public void setReceveMailAllies(boolean receveMailAllies) {
+		this.receveMailAllies = receveMailAllies;
+	}
+
+	public boolean isReceiveMailAll() {
+		return receiveMailAll;
+	}
+
+	public void setReceiveMailAll(boolean receiveMailAll) {
+		this.receiveMailAll = receiveMailAll;
+	}
+
+	public Optional<JSONObject> getJsonMeta() {
+		return jsonMeta;
+	}
+
+	public void setJsonMeta(Optional<JSONObject> jsonMeta) {
+		this.jsonMeta = jsonMeta;
 	}
 }
