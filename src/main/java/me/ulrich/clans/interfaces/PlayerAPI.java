@@ -114,4 +114,8 @@ public interface PlayerAPI {
 
 	void updatePlayerSkin(UUID player);
 
+	boolean canGeneralPvp(UUID attackerUUID, UUID victimUUID);
+
+	boolean canGeneralPvp(Player attacker, Player victim);
+
 }
