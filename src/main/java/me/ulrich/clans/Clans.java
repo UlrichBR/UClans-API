@@ -33,6 +33,7 @@ import me.ulrich.clans.interfaces.UClans;
 public final class Clans extends JavaPlugin implements UClans{
 
 	private String buildVersion = "V8";
+	private String memberVersion = "NONE";
 	private boolean entity = false;
 
 	
@@ -223,6 +224,9 @@ public final class Clans extends JavaPlugin implements UClans{
 
 	public boolean isEntity() {
 		return entity;
+	}
+	public String getMemberVersion() {
+		return memberVersion;
 	}
 
 }
