@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import me.ulrich.clans.Clans;
 import me.ulrich.clans.data.Addon;
+import me.ulrich.clans.data.AddonInfo;
 import me.ulrich.clans.interfaces.AddonAPI;
 
 public class AddonAPIManager implements AddonAPI {
@@ -12,7 +13,7 @@ public class AddonAPIManager implements AddonAPI {
 	public AddonAPIManager(Clans clans) {}
 	
 	@Override
-	public HashMap<Addon, Boolean> getAddonEnabledList(){
+	public HashMap<Addon, AddonInfo> getAddonEnabledList(){
 		return null;
 	}
 	
