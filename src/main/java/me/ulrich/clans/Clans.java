@@ -27,6 +27,7 @@ import me.ulrich.clans.api.RewardsAPIManager;
 import me.ulrich.clans.api.ScoreboardAPIManager;
 import me.ulrich.clans.api.SyncAPIManager;
 import me.ulrich.clans.data.Addon;
+import me.ulrich.clans.data.AddonInfo;
 import me.ulrich.clans.data.Extension;
 import me.ulrich.clans.interfaces.UClans;
 
@@ -38,7 +39,7 @@ public final class Clans extends JavaPlugin implements UClans{
 
 	
 	//addon usage
-	private HashMap<Addon, Boolean> addonEnabledList = new HashMap<Addon, Boolean>();
+	private HashMap<Addon, AddonInfo> addonEnabledList = new HashMap<Addon, AddonInfo>();
 	private HashMap<Extension, Boolean> extensionEnabledList = new HashMap<Extension, Boolean>();
 
 	private final ClanAPIManager ClanAPI;
@@ -131,7 +132,7 @@ public final class Clans extends JavaPlugin implements UClans{
 		return null;
 	}
 	
-	public HashMap<Addon, Boolean> getAddonEnabledList() {
+	public HashMap<Addon, AddonInfo> getAddonEnabledList() {
 		return null;
 	}
 
@@ -225,6 +226,7 @@ public final class Clans extends JavaPlugin implements UClans{
 	public boolean isEntity() {
 		return entity;
 	}
+
 	public String getMemberVersion() {
 		return memberVersion;
 	}
