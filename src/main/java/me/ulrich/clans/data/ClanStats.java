@@ -11,8 +11,12 @@ private int warWin;
 private int warLose;
 private int tagChanged;
 private int memberKicked;
+private int gladWin;
+private int gladLose;
+private int leagueWin;
+private int leagueLose;
 
-	public ClanStats(int kills, int deaths, int souls, int memberJoined, int memberLeft, int warWin, int warLose, int tagChanged, int memberKicked) {
+	public ClanStats(int kills, int deaths, int souls, int memberJoined, int memberLeft, int warWin, int warLose, int tagChanged, int memberKicked, int gladWin, int gladLose, int leagueWin, int leagueLose) {
 		this.setKills(kills);
 		this.setDeaths(deaths);
 		this.setSouls(souls);
@@ -22,6 +26,10 @@ private int memberKicked;
 		this.setWarLose(warLose);
 		this.setTagChanged(tagChanged);
 		this.setMemberKicked(memberKicked);
+		this.setGladWin(gladWin);
+		this.setGladLose(gladLose);
+		this.setLeagueWin(leagueWin);
+		this.setLeagueLose(leagueLose);
 		
 	}
 
@@ -95,5 +103,37 @@ private int memberKicked;
 
 	public void setMemberKicked(int memberKicked) {
 		this.memberKicked = memberKicked;
+	}
+
+	public int getGladWin() {
+		return gladWin;
+	}
+
+	public void setGladWin(int gladWin) {
+		this.gladWin = gladWin;
+	}
+
+	public int getGladLose() {
+		return gladLose;
+	}
+
+	public void setGladLose(int gladLose) {
+		this.gladLose = gladLose;
+	}
+
+	public int getLeagueWin() {
+		return leagueWin;
+	}
+
+	public void setLeagueWin(int leagueWin) {
+		this.leagueWin = leagueWin;
+	}
+
+	public int getLeagueLose() {
+		return leagueLose;
+	}
+
+	public void setLeagueLose(int leagueLose) {
+		this.leagueLose = leagueLose;
 	}
 }
