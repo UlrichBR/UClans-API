@@ -30,12 +30,14 @@ import me.ulrich.clans.data.Addon;
 import me.ulrich.clans.data.AddonInfo;
 import me.ulrich.clans.data.Extension;
 import me.ulrich.clans.interfaces.UClans;
+import me.ulrich.clans.manager.DatabaseManager.DataEnum;
 
 public final class Clans extends JavaPlugin implements UClans{
 
 	private String buildVersion = "V8";
 	private String memberVersion = "NONE";
 	private boolean entity = false;
+	private DataEnum databaseType = DataEnum.YAML;
 
 	
 	//addon usage
@@ -230,5 +232,12 @@ public final class Clans extends JavaPlugin implements UClans{
 	public String getMemberVersion() {
 		return memberVersion;
 	}
+	public DataEnum getDatabaseType() {
+		return null;
+	}
 
+	public void setDatabaseType(DataEnum databaseType) {
+		
+	}
 }
+
