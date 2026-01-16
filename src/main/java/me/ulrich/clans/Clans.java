@@ -38,7 +38,7 @@ public final class Clans extends JavaPlugin implements UClans{
 	private String memberVersion = "NONE";
 	private boolean entity = false;
 	private DataEnum databaseType = DataEnum.YAML;
-
+	private boolean title_alerts = true;
 	
 	//addon usage
 	private HashMap<Addon, AddonInfo> addonEnabledList = new HashMap<Addon, AddonInfo>();
@@ -232,12 +232,13 @@ public final class Clans extends JavaPlugin implements UClans{
 	public String getMemberVersion() {
 		return memberVersion;
 	}
+
 	public DataEnum getDatabaseType() {
-		return null;
+		return databaseType;
 	}
 
-	public void setDatabaseType(DataEnum databaseType) {
-		
+	public boolean isTitleAlerts() {
+		return title_alerts;
 	}
+
 }
-
