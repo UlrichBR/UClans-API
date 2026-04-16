@@ -23,4 +23,5 @@ public interface GuiAPI {
 
 	void close(Player player);
 
+	boolean useTitleAlerts();
 }
