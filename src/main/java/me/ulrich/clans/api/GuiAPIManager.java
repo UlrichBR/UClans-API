@@ -42,4 +42,9 @@ public class GuiAPIManager implements GuiAPI {
 	public void close(Player player) {
 		
 	}
+
+	@Override
+	public boolean useTitleAlerts() {
+		return false;
+	}
 }
