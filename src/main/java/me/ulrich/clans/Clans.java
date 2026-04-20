@@ -147,7 +147,7 @@ public final class Clans extends JavaPlugin implements UClans{
 		return null;
 	}
 	
-	public HashMap<Extension, Boolean> getModuleEnabledList() {
+	public HashMap<Module, Boolean> getModuleEnabledList() {
 		return null;
 	}
 
