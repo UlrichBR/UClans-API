@@ -94,6 +94,7 @@ public final class Clans extends JavaPlugin implements UClans{
 		this.guiAPI = new GuiAPIManager(this);
 		this.rewardsAPI = new RewardsAPIManager(this);
 		this.entityAPI = new EntityAPIManager(this);
+		this.anvilAPI = new AnvilAPIManager(this);
 
 	}
 	
