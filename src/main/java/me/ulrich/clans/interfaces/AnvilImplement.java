@@ -1,14 +1,13 @@
 package me.ulrich.clans.interfaces;
 
 import java.util.Optional;
-
-import org.bukkit.entity.Player;
+import net.wesjd.anvilgui.AnvilGUI.Builder;
 
 public interface AnvilImplement {
 
-    boolean supports(String serverVersion);
+    boolean supports();
 
-    void open(Player player, String title, String text, AnvilCallback callback);
+    Builder builder();
 	
 	boolean isInternal();
 	
