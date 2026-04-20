@@ -30,6 +30,7 @@ import me.ulrich.clans.api.SyncAPIManager;
 import me.ulrich.clans.data.Addon;
 import me.ulrich.clans.data.AddonInfo;
 import me.ulrich.clans.data.Extension;
+import me.ulrich.clans.data.Module;
 import me.ulrich.clans.interfaces.UClans;
 import me.ulrich.clans.manager.DatabaseManager.DataEnum;
 
