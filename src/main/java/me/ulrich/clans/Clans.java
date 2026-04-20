@@ -5,6 +5,7 @@ import java.util.HashMap;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import me.ulrich.clans.api.AddonAPIManager;
+import me.ulrich.clans.api.AnvilAPIManager;
 import me.ulrich.clans.api.BossBarAPIManager;
 import me.ulrich.clans.api.ClaimAPIManager;
 import me.ulrich.clans.api.ClanAPIManager;
@@ -34,7 +35,7 @@ import me.ulrich.clans.manager.DatabaseManager.DataEnum;
 
 public final class Clans extends JavaPlugin implements UClans{
 
-	private String buildVersion = "V8";
+	private String buildVersion = "V9";
 	private String memberVersion = "NONE";
 	private boolean entity = false;
 	private DataEnum databaseType = DataEnum.YAML;
@@ -66,6 +67,8 @@ public final class Clans extends JavaPlugin implements UClans{
 	private final GuiAPIManager guiAPI;
 	private RewardsAPIManager rewardsAPI;
 	private EntityAPIManager entityAPI;
+	private AnvilAPIManager anvilAPI;
+
 
 	public Clans() {
 		
@@ -239,6 +242,11 @@ public final class Clans extends JavaPlugin implements UClans{
 
 	public boolean isTitleAlerts() {
 		return title_alerts;
+	}
+
+	@Override
+	public AnvilAPIManager getAnvilAPI() {
+		return null;
 	}
 
 }
