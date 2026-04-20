@@ -3,6 +3,7 @@ package me.ulrich.clans.interfaces;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import me.ulrich.clans.api.AddonAPIManager;
+import me.ulrich.clans.api.AnvilAPIManager;
 import me.ulrich.clans.api.BossBarAPIManager;
 import me.ulrich.clans.api.ClaimAPIManager;
 import me.ulrich.clans.api.ClanAPIManager;
@@ -70,7 +71,8 @@ public interface UClans {
 	RewardsAPIManager getRewardsAPI();
 	
 	EntityAPIManager getEntityAPI();
-	
+	AnvilAPIManager getAnvilAPI();
+
 	GuiAPIManager getGuiAPI();
 
 	
