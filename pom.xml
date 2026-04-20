@@ -85,10 +85,6 @@
 			<id>jitpack.io</id>
 			<url>https://jitpack.io</url>
 		</repository>
-<repository>
-  <id>mvn-wesjd-net</id>
-  <url>https://mvn.wesjd.net/</url>
-</repository>
 	</repositories>
 	<dependencies>
 		<!--Spigot -->
@@ -145,13 +141,6 @@
 			<artifactId>EntityWizard</artifactId>
 			<version>1.0.0</version>
 			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>net.wesjd</groupId>
-			<artifactId>anvilgui</artifactId>
-			<version>1.10.12-SNAPSHOT</version>
-			<scope>provided</scope>
-			<!-- Include the library in your JAR -->
 		</dependency>
 	</dependencies>
 </project>

@@ -1,13 +1,16 @@
 package me.ulrich.clans.interfaces;
 
 import java.util.Optional;
-import net.wesjd.anvilgui.AnvilGUI.Builder;
+
+import org.bukkit.entity.Player;
+
+import me.ulrich.clans.data.AnvilSession;
 
 public interface AnvilImplement {
 
     boolean supports();
 
-    Builder builder();
+    AnvilSession open(Player player, String title, AnvilClickHandler handler);
 	
 	boolean isInternal();
 	
@@ -15,3 +18,4 @@ public interface AnvilImplement {
 	
 	Optional<String> getPluginName();
 }
+
