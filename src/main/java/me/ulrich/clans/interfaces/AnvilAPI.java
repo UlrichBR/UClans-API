@@ -1,11 +1,28 @@
 package me.ulrich.clans.interfaces;
 
-import org.bukkit.entity.Player;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Optional;
+
 
 public interface AnvilAPI {
 
-    boolean supports(String serverVersion);
+	Optional<AnvilImplement> getPreferentialOrFirstImplement();
 
-    void open(Player player, String title, String text, AnvilCallback callback);
+	HashMap<String, AnvilImplement> getImplementedAnvil();
+
+	boolean addImplementation(String pluginName, AnvilImplement region);
+
+	boolean hasPluginImplemented(String pluginName);
+
+	boolean removeImplementation(String pluginName);
+
+	Optional<AnvilImplement> getAnvilImplemented(String pluginName);
+
+	List<String> getImplementationPluginsNames();
 	
+	HashMap<String, AnvilImplement> getImplementationPluginsData();
+    
+    
+    
 }

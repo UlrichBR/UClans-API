@@ -44,6 +44,7 @@ public final class Clans extends JavaPlugin implements UClans{
 	//addon usage
 	private HashMap<Addon, AddonInfo> addonEnabledList = new HashMap<Addon, AddonInfo>();
 	private HashMap<Extension, Boolean> extensionEnabledList = new HashMap<Extension, Boolean>();
+	private HashMap<Module, Boolean> moduleEnabledList = new HashMap<Module, Boolean>();
 
 	private final ClanAPIManager ClanAPI;
 	private final PlayerAPIManager PlayerAPI;
@@ -143,6 +144,10 @@ public final class Clans extends JavaPlugin implements UClans{
 	}
 
 	public HashMap<Extension, Boolean> getExtensionEnabledList() {
+		return null;
+	}
+	
+	public HashMap<Extension, Boolean> getModuleEnabledList() {
 		return null;
 	}
 
