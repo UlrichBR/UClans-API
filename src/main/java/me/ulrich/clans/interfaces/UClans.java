@@ -7,6 +7,7 @@ import me.ulrich.clans.api.AnvilAPIManager;
 import me.ulrich.clans.api.BossBarAPIManager;
 import me.ulrich.clans.api.ClaimAPIManager;
 import me.ulrich.clans.api.ClanAPIManager;
+import me.ulrich.clans.api.ColorAPIManager;
 import me.ulrich.clans.api.CommandAPIManager;
 import me.ulrich.clans.api.DiscordAPIManager;
 import me.ulrich.clans.api.EntityAPIManager;
@@ -71,16 +72,19 @@ public interface UClans {
 	RewardsAPIManager getRewardsAPI();
 	
 	EntityAPIManager getEntityAPI();
+	
 	AnvilAPIManager getAnvilAPI();
-
+	
 	GuiAPIManager getGuiAPI();
 
+	ColorAPIManager getColorAPI();
 	
-	void loadAddons();
 	void startTasks();
 	void registerEvents();
-
+	
+	void loadAddons();
 	void loadExtensions();
+	void loadModules();
 
 	
 	

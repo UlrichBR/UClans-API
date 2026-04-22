@@ -9,6 +9,7 @@ import me.ulrich.clans.api.AnvilAPIManager;
 import me.ulrich.clans.api.BossBarAPIManager;
 import me.ulrich.clans.api.ClaimAPIManager;
 import me.ulrich.clans.api.ClanAPIManager;
+import me.ulrich.clans.api.ColorAPIManager;
 import me.ulrich.clans.api.CommandAPIManager;
 import me.ulrich.clans.api.DiscordAPIManager;
 import me.ulrich.clans.api.EntityAPIManager;
@@ -70,33 +71,35 @@ public final class Clans extends JavaPlugin implements UClans{
 	private RewardsAPIManager rewardsAPI;
 	private EntityAPIManager entityAPI;
 	private AnvilAPIManager anvilAPI;
+	private ColorAPIManager colorAPI;
 
 
 	public Clans() {
 		
-		this.ClanAPI = new ClanAPIManager(this);
-		this.PlayerAPI = new PlayerAPIManager(this);
-		this.MoneyAPI = new MoneyAPIManager(this);
-		this.HooksAPI = new HooksAPIManager(this);
-		this.BossBarAPI = new BossBarAPIManager(this);
-		this.AddonAPI = new AddonAPIManager(this);
-		this.libAPI = new LibAPIManager(this);
-		this.modAPI = new ModerationAPIManager(this);
-		this.levelAPI = new LevelAPIManager(this);
-		this.commandAPI = new CommandAPIManager(this);
-		this.loggerAPI = new LoggerAPIManager(this);
-		this.discordAPI = new DiscordAPIManager(this);
-		this.syncAPI = new SyncAPIManager(this);
-		this.regionAPI = new RegionAPIManager(this);
-		this.claimAPI = new ClaimAPIManager(this);
-		this.eventAPI = new EventAPIManager(this);
-		this.hologramAPI = new HologramAPIManager(this);
-		this.mapAPI = new MapAPIManager(this);
-		this.scoreboardAPI = new ScoreboardAPIManager(this);
-		this.guiAPI = new GuiAPIManager(this);
-		this.rewardsAPI = new RewardsAPIManager(this);
-		this.entityAPI = new EntityAPIManager(this);
-		this.anvilAPI = new AnvilAPIManager(this);
+		this.ClanAPI = null;
+		this.PlayerAPI = null;
+		this.MoneyAPI = null;
+		this.HooksAPI = null;
+		this.BossBarAPI = null;
+		this.AddonAPI = null;
+		this.libAPI = null;
+		this.modAPI = null;
+		this.levelAPI = null;
+		this.commandAPI = null;
+		this.loggerAPI = null;
+		this.discordAPI = null;
+		this.syncAPI = null;
+		this.regionAPI = null;
+		this.claimAPI = null;
+		this.eventAPI = null;
+		this.hologramAPI = null;
+		this.mapAPI = null;
+		this.scoreboardAPI = null;
+		this.guiAPI = null;
+		this.rewardsAPI = null;
+		this.entityAPI = null;
+		this.anvilAPI = null;
+		this.colorAPI = null;
 
 	}
 	
@@ -254,6 +257,15 @@ public final class Clans extends JavaPlugin implements UClans{
 	@Override
 	public AnvilAPIManager getAnvilAPI() {
 		return null;
+	}
+
+	public ColorAPIManager getColorAPI() {
+		return colorAPI;
+	}
+
+	@Override
+	public void loadModules() {
+		
 	}
 
 }
