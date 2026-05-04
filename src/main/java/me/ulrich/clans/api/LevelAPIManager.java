@@ -1,8 +1,8 @@
 package me.ulrich.clans.api;
 
-import java.util.HashMap;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.command.CommandSender;
 
@@ -90,7 +90,7 @@ public class LevelAPIManager implements LevelAPI {
 	}
 
 	@Override
-	public HashMap<String, PatentData> getPatentData() {
+	public ConcurrentHashMap<String, PatentData> getPatentData() {
 		return null;
 	}
 

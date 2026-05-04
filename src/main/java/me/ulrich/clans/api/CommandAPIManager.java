@@ -2,6 +2,7 @@ package me.ulrich.clans.api;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.command.CommandSender;
 
@@ -22,12 +23,12 @@ public class CommandAPIManager implements CommandAPI {
 	public CommandAPIManager(Clans clans) {}
 	
 	@Override
-	public HashMap<String, CommandData> getClanCommander() {
+	public ConcurrentHashMap<String, CommandData> getClanCommander() {
 		return null;
 	}
 
 	@Override
-	public HashMap<String, CommandData> getUClanCommander() {
+	public ConcurrentHashMap<String, CommandData> getUClanCommander() {
 		return null;
 	}
 	
@@ -41,12 +42,12 @@ public class CommandAPIManager implements CommandAPI {
 	public void insertCommand(String command, String permission, String alias, double value, int cooldown, CommandData_show data,CommandData_title title, CommandData_actionbar actionbar, CommandData_sound sound, HashMap<String, CommandData_show> subcommands, CommandData_disable disable) {}
 	
 	@Override
-	public HashMap<String, String> getCommandAliases(){
+	public ConcurrentHashMap<String, String> getCommandAliases(){
 		return null;
 	}
 	
 	@Override
-	public HashMap<String, String> getMainCommandAliases(){
+	public ConcurrentHashMap<String, String> getMainCommandAliases(){
 		return null;
 	}
 	

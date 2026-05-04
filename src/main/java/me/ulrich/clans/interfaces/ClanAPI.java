@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
@@ -22,15 +23,15 @@ import me.ulrich.clans.data.ModerationData;
 
 public interface ClanAPI {
 
-	void saveClanData(ClanData clan, boolean asynchronously);
+	void saveClanData(ClanData clan);
 
-	void deleteClanData(UUID clanUUID, boolean asynchronously);
+	void deleteClanData(UUID clanUUID);
 
-	void reloadClanData(UUID clanUUID, boolean asynchronously);
+	void reloadClanData(UUID clanUUID);
 
-	void loadAllClanData(boolean asynchronously);
+	void loadAllClanData();
 
-	HashMap<UUID, ClanData> getClanData();
+	ConcurrentHashMap<UUID, ClanData> getClanData();
 
 	Optional<UUID> getClanByTag(String tag);
 

@@ -13,7 +13,12 @@ public interface SyncAPI {
 
 	boolean syncEnabled();
 
+	@Deprecated
 	void newSync(RedisType type, String string);
+	
+	void sendSync(RedisType type, String content);
+	
+	void sendSync(RedisType type, UUID uuid);
 
 	void serverConnector(Player player, String server);
 

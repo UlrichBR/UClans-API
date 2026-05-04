@@ -1,9 +1,9 @@
 package me.ulrich.clans.api;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.entity.Player;
 
@@ -129,13 +129,13 @@ public class LibAPIManager implements LibAPI {
 	}
 
 	@Override
-	public HashMap<UUID, MyScheduledTask> getBossbarTasks() {
+	public ConcurrentHashMap<UUID, MyScheduledTask> getBossbarTasks() {
 		
 		return null;
 	}
 
 	@Override
-	public HashMap<UUID, MyScheduledTask> getLibTasks() {
+	public ConcurrentHashMap<UUID, MyScheduledTask> getLibTasks() {
 		
 		return null;
 	}

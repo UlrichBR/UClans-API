@@ -1,7 +1,7 @@
 package me.ulrich.clans.interfaces;
 
-import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.entity.Player;
 
@@ -11,7 +11,7 @@ import me.ulrich.clans.data.GuiData;
 
 public interface GuiAPI {
 
-	HashMap<String, GuiData> getInsertGui();
+	ConcurrentHashMap<String, GuiData> getInsertGui();
 
 	List<Player> getOpenedGuiPlayers();
 
@@ -22,6 +22,7 @@ public interface GuiAPI {
 	void insertItens(PaginatedGui gui, String string, String string2, Player player);
 
 	void close(Player player);
-
+	
 	boolean useTitleAlerts();
+
 }

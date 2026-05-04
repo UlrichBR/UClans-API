@@ -1,15 +1,19 @@
 package me.ulrich.clans.data;
 
+import java.util.Optional;
+
 public class HomesData {
 
 	private String server;
 	private String loc;
 	private String name;
+	private Optional<String> password;
 
-	public HomesData(String server, String name, String loc) {
+	public HomesData(String server, String name, String loc, Optional<String> password) {
 		this.setServer(server);
 		this.setName(name);
 		this.setLoc(loc);
+		this.setPassword(password);
 	}
 
 	public String getLoc() {
@@ -34,6 +38,14 @@ public class HomesData {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Optional<String> getPassword() {
+		return password;
+	}
+
+	public void setPassword(Optional<String> password) {
+		this.password = password;
 	}
 	
 }

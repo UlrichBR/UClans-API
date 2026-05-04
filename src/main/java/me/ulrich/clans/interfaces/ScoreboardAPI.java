@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.entity.Player;
 
@@ -31,6 +32,6 @@ public interface ScoreboardAPI {
 
 	void hideScoreboard(Player player);
 	
-	HashMap<UUID, Sidebar> getBoards();
+	ConcurrentHashMap<UUID, Sidebar> getBoards();
 	
 }

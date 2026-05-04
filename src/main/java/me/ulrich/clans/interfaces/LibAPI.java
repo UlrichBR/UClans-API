@@ -1,9 +1,9 @@
 package me.ulrich.clans.interfaces;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.entity.Player;
 
@@ -57,9 +57,9 @@ public interface LibAPI {
 	
 	TaskScheduler getScheduler();
 	
-	HashMap<UUID, MyScheduledTask> getBossbarTasks();
+	ConcurrentHashMap<UUID, MyScheduledTask> getBossbarTasks();
 	
-	HashMap<UUID, MyScheduledTask> getLibTasks();
+	ConcurrentHashMap<UUID, MyScheduledTask> getLibTasks();
 
 	boolean playSoundForAll(String sound);
 
@@ -68,7 +68,7 @@ public interface LibAPI {
 	boolean playSound(Player p, List<String> sounds);
 
 	boolean playSound(Player p, String sound);
-
+	
 	
 	
 }

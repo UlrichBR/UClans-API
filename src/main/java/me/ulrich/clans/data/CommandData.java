@@ -17,7 +17,7 @@ public class CommandData {
 	private CommandData_disable disable;
 	private CommandData_sound sound;
 	
-	public CommandData(String id, String permission, String alias, double value, int cooldown, CommandData_show show, CommandData_title title, CommandData_actionbar actionbar, CommandData_sound sound, HashMap<String, CommandData_show> subcommands, CommandData_disable disable) {
+	public CommandData(String id, String permission, String alias, double value, int cooldown, CommandData_show show, CommandData_title title, CommandData_actionbar actionbar, CommandData_sound sound, HashMap<String, CommandData_show> subcommands2, CommandData_disable disable) {
 		this.setId(id);
 		this.setPermission(permission);
 		this.setAlias(alias);
@@ -27,7 +27,7 @@ public class CommandData {
 		this.setTitle(title);
 		this.setActionbar(actionbar);
 		this.setSound(sound);
-		this.setSubcommands(subcommands);
+		this.setSubcommands(subcommands2);
 		this.setDisable(disable);
 	}
 
@@ -99,8 +99,8 @@ public class CommandData {
 		return subcommands;
 	}
 
-	public void setSubcommands(HashMap<String, CommandData_show> subcommands) {
-		this.subcommands = subcommands;
+	public void setSubcommands(HashMap<String, CommandData_show> subcommands2) {
+		this.subcommands = subcommands2;
 	}
 
 	public CommandData_disable getDisable() {

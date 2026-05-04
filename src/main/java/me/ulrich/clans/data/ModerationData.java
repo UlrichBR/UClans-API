@@ -1,6 +1,8 @@
 package me.ulrich.clans.data;
 
 import java.util.HashMap;
+import java.util.Optional;
+import java.util.UUID;
 
 public class ModerationData {
 
@@ -11,8 +13,9 @@ public class ModerationData {
 	private boolean editable;
 	private boolean upgradable;
 	private GuiItemsData icon;
+	private Optional<UUID> owner;
 
-	public ModerationData(String id, String name, int priority, HashMap<String, Boolean> permissionList, boolean editable, boolean upgradable, GuiItemsData icon ) {
+	public ModerationData(String id, String name, int priority, HashMap<String, Boolean> permissionList, boolean editable, boolean upgradable, GuiItemsData icon, Optional<UUID> owner ) {
 
 		this.setId(id);
 		this.setName(name);
@@ -21,6 +24,7 @@ public class ModerationData {
 		this.setEditable(editable);
 		this.setUpgradable(upgradable);
 		this.setIcon(icon);
+		this.setOwner(owner);
 	}
 
 	public String getId() {
@@ -77,5 +81,13 @@ public class ModerationData {
 
 	public void setIcon(GuiItemsData icon) {
 		this.icon = icon;
+	}
+
+	public Optional<UUID> getOwner() {
+		return owner;
+	}
+
+	public void setOwner(Optional<UUID> owner) {
+		this.owner = owner;
 	}
 }

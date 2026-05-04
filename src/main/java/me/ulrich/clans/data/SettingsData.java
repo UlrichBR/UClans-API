@@ -2,6 +2,7 @@ package me.ulrich.clans.data;
 
 import java.util.Optional;
 
+import org.json.JSONObject;
 
 public class SettingsData {
 
@@ -13,9 +14,10 @@ public class SettingsData {
 	private boolean publicHomes;
 	private boolean receveMailAllies;
 	private boolean receiveMailAll;
-	private Optional<Object> jsonMeta;
+	private Optional<JSONObject> jsonMeta;
+	private boolean allyPvp;
 
-	public SettingsData(Optional<Object> jsonMeta, boolean warInvite, boolean allySharedChat, boolean joinLeave, boolean allySharedHome, boolean opened, boolean publicHomes, boolean receveMailAllies, boolean receiveMailAll) {
+	public SettingsData(Optional<JSONObject> jsonMeta, boolean warInvite, boolean allySharedChat, boolean joinLeave, boolean allySharedHome, boolean opened, boolean publicHomes, boolean receveMailAllies, boolean receiveMailAll, boolean allyPvp) {
 		this.setWarInvite(warInvite);
 		this.setAllySharedChat(allySharedChat);
 		this.setJoinLeave(joinLeave);
@@ -25,6 +27,7 @@ public class SettingsData {
 		this.setReceveMailAllies(receveMailAllies);
 		this.setReceiveMailAll(receiveMailAll);
 		this.setJsonMeta(jsonMeta);
+		this.setAllyPvp(allyPvp);
 
 	}
 
@@ -93,11 +96,19 @@ public class SettingsData {
 		this.receiveMailAll = receiveMailAll;
 	}
 
-	public Optional<Object> getJsonMeta() {
+	public Optional<JSONObject> getJsonMeta() {
 		return jsonMeta;
 	}
 
-	public void setJsonMeta(Optional<Object> jsonMeta) {
+	public void setJsonMeta(Optional<JSONObject> jsonMeta) {
 		this.jsonMeta = jsonMeta;
+	}
+
+	public boolean isAllyPvp() {
+		return allyPvp;
+	}
+
+	public void setAllyPvp(boolean allyPvp) {
+		this.allyPvp = allyPvp;
 	}
 }

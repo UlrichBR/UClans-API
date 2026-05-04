@@ -1,9 +1,9 @@
 package me.ulrich.clans.api;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.Material;
 
@@ -13,10 +13,9 @@ import me.ulrich.clans.interfaces.RewardsAPI;
 
 public class RewardsAPIManager implements RewardsAPI {
 
-	private final Clans plugin;
 
 	public RewardsAPIManager(Clans clans) {
-		this.plugin = clans;
+	
 	}
 
 	@Override
@@ -56,7 +55,7 @@ public class RewardsAPIManager implements RewardsAPI {
 	}
 
 	@Override
-	public HashMap<UUID, RewardsData> getRewardsData() {
+	public ConcurrentHashMap<UUID, RewardsData> getRewardsData() {
 		return null;
 	}
 

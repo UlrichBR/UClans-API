@@ -1,7 +1,7 @@
 package me.ulrich.clans.api;
 
-import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.entity.Player;
 
@@ -16,7 +16,7 @@ public class GuiAPIManager implements GuiAPI {
 	public GuiAPIManager(Clans clans) {}
 	
 	@Override
-	public HashMap<String, GuiData> getInsertGui() {
+	public ConcurrentHashMap<String, GuiData> getInsertGui() {
 		return null;
 	}
 	

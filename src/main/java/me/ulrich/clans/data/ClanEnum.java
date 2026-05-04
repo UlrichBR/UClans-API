@@ -15,13 +15,39 @@ public class ClanEnum {
 		WorldGuardRegion,
 		FancyHolograms,
 		GriefPrevention,
+		GriefDefender,
 		TAB,
 		CMIScoreboard,
 		FeatherBoard,
 		SternalBoard,
-		SimpleCore,
+		SimpleScore,
 		BlueMap,
-		TNE;
+		AnimatedScoreboard,
+		Eco,
+		TNE,
+		ProtectionStones,
+		HuskClaims,
+
+	}
+	
+	
+	public enum ClansAddons{
+		ClanBank,
+		ClanChest,
+		ClanQuest,
+		ClanWar,
+		ClanGladiator,
+		ClanLand,
+		ClanLeaderboard,
+		ClanNexus,
+		ClanLeague,
+		ClanFarmCoins;
+		
+		
+	}
+	
+	public enum ReloadType {
+		ALL, ADDONS, CONFIGURATIONS
 		
 		
 	}
@@ -33,7 +59,7 @@ public class ClanEnum {
 	}
 	
 	public enum ClanLangs{
-		EN, PL, TR, RU, ES, HU, GE, BR;
+		EN, PL, TR, RU, ES, HU, GE, BR, FR;
 	}
 	
 	
@@ -49,9 +75,7 @@ public class ClanEnum {
 		KICK, LEAVE;
 	}
 	
-	public enum Agent {
-		POLYMART, BUILDBYBIT, NONE;
-	}
+
 	
 	public enum BannerFilter{
 		COMMON, BANNER, HEAD;
@@ -107,7 +131,11 @@ public class ClanEnum {
 	}
 
 	public enum PlaceholderTop{
-		KILL, DEATH, KDR, MEMBER, BANK, LEVEL, WAR, ALL, POINT, PATENT;
+		KILL, DEATH, KDR, MEMBER, BANK, LEVEL, WAR, ALL, POINT, PATENT, SOULS;
+	}
+	
+	public enum PlaceholderPlayerTop{
+		ALL, KDR, SOULS;
 	}
 	
 	public enum ClanActions{
@@ -118,12 +146,16 @@ public class ClanEnum {
 		RESET, KILL, DEATH;
 	}
 	
+	public enum SoulsChangeType{
+		RESET, KILL, DEATH;
+	}
+	
 	public enum RivalAllyCount{
 		RIVAL, ALLY;
 	}
 	
 	public enum SettingsType{
-		WARINVITE, ALLYSHAREDCHAT, JOINLEAVE, ALLYSHAREDHOME, CLANFF, OPENED, PUBLICHOMES, RECEIVEMAILALLIES, RECEIVEMAILALL;
+		WARINVITE, ALLYSHAREDCHAT, JOINLEAVE, ALLYSHAREDHOME, CLANFF, OPENED, PUBLICHOMES, RECEIVEMAILALLIES, RECEIVEMAILALL, ALLYPVP;
 	}
 	
 	public enum PlayerSettingsType{
@@ -131,7 +163,7 @@ public class ClanEnum {
 	}
 	
 	public enum RedisType{
-		EMPTY, CLANUPDATEUUID, PLAYERUPDATEUUID, INVITEUPDATEUUID, MODERATIONUPDATEUUID, PLAYERTELEPORT, CLANCHAT, CUSTOM, CLEARPRORYEDPLAYERS, PROXYEDPLAYERS, EVENTMESSAGES;
+		EMPTY, CLANUPDATEUUID, PLAYERUPDATEUUID, INVITEUPDATEUUID, MODERATIONUPDATEUUID, PLAYERTELEPORT, CLANCHAT, CUSTOM, CLEARPRORYEDPLAYERS, PROXYEDPLAYERS, EVENTMESSAGES, CLANREWARDS, CLANMAILS, CLANLOGGER;
 	}
 	
 	public enum SettingsFlagsAccept {

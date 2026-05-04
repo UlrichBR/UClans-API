@@ -12,10 +12,9 @@ import me.ulrich.clans.interfaces.SyncAPI;
 
 public class SyncAPIManager implements SyncAPI {
 
-	private final Clans plugin;
 
 	public SyncAPIManager(Clans clans) {
-		this.plugin = clans;
+	
 	}
 	
 	public enum DebugType {
@@ -42,10 +41,7 @@ public class SyncAPIManager implements SyncAPI {
 	public void debugMessage(DebugType type, String message) {
 		
 	}
-	
-	public Clans getPlugin() {
-		return plugin;
-	}
+
 
 	@Override
 	public void clearOnlineData() {
@@ -80,5 +76,15 @@ public class SyncAPIManager implements SyncAPI {
 	@Override
 	public String getServerName() {
 		return null;
+	}
+
+	@Override
+	public void sendSync(RedisType type, String content) {
+		
+	}
+
+	@Override
+	public void sendSync(RedisType type, UUID uuid) {
+		
 	}
 }

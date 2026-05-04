@@ -3,6 +3,7 @@ package me.ulrich.clans.api;
 import java.util.HashMap;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -21,31 +22,26 @@ public class PlayerAPIManager implements PlayerAPI {
 
 	
 	@Override
-	public void loadAllPlayerData(boolean asynchronously) {
+	public void loadAllPlayerData() {
+
+		
+	}
+
+
+	@Override
+	public void loadPlayerData(UUID uuid) {
 
 		
 	}
 
 	@Override
-	public void loadAllPlayerDataByClan(UUID clanUUID, boolean asynchronously) {
+	public void savePlayerData(PlayerData player) {
 
 		
 	}
 
 	@Override
-	public void loadPlayerData(UUID uuid, boolean asynchronously) {
-
-		
-	}
-
-	@Override
-	public void savePlayerData(PlayerData player, boolean asynchronously) {
-
-		
-	}
-
-	@Override
-	public HashMap<UUID, PlayerData> getPlayerData() {
+	public ConcurrentHashMap<UUID, PlayerData> getPlayerData() {
 
 		return null;
 	}

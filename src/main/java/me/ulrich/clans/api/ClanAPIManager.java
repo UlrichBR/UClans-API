@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
@@ -28,31 +29,31 @@ public class ClanAPIManager implements ClanAPI {
 	public ClanAPIManager(Clans plugin) {}
 
 	@Override
-	public void saveClanData(ClanData clan, boolean asynchronously) {
+	public void saveClanData(ClanData clan) {
 
 		
 	}
 
 	@Override
-	public void deleteClanData(UUID clanUUID, boolean asynchronously) {
+	public void deleteClanData(UUID clanUUID) {
 
 		
 	}
 
 	@Override
-	public void reloadClanData(UUID clanUUID, boolean asynchronously) {
+	public void reloadClanData(UUID clanUUID) {
 
 		
 	}
 
 	@Override
-	public void loadAllClanData(boolean asynchronously) {
+	public void loadAllClanData() {
 
 		
 	}
 
 	@Override
-	public HashMap<UUID, ClanData> getClanData() {
+	public ConcurrentHashMap<UUID, ClanData> getClanData() {
 
 		return null;
 	}

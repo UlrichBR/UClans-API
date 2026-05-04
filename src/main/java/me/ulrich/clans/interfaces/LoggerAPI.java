@@ -1,9 +1,9 @@
 package me.ulrich.clans.interfaces;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.Material;
 
@@ -26,7 +26,7 @@ public interface LoggerAPI {
 	
 	boolean addClanLogger(UUID clanUUID, String text, String plugin, Material material);
 
-	HashMap<UUID, List<LoggerData>> getLoggerData();
+	ConcurrentHashMap<UUID, List<LoggerData>> getLoggerData();
 
 	Optional<LoggerData> getPluginLogger(UUID clanUUID, UUID loggerUUID);
 

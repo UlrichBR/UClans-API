@@ -1,8 +1,8 @@
 package me.ulrich.clans.interfaces;
 
-import java.util.HashMap;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -16,15 +16,13 @@ import me.ulrich.clans.data.ClanEnum.SettingsFlagsAccept;
 
 public interface PlayerAPI {
 
-	public void loadAllPlayerData(boolean asynchronously);
+	public void loadAllPlayerData();
 
-	void loadAllPlayerDataByClan(UUID clanUUID, boolean asynchronously);
+	void loadPlayerData(UUID uuid);
 
-	void loadPlayerData(UUID uuid, boolean asynchronously);
+	void savePlayerData(PlayerData player);
 
-	void savePlayerData(PlayerData player, boolean asynchronously);
-
-	HashMap<UUID, PlayerData> getPlayerData();
+	ConcurrentHashMap<UUID, PlayerData> getPlayerData();
 
 	void loadAllOnlineInfo();
 

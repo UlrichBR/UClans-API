@@ -2,6 +2,7 @@ package me.ulrich.clans.data;
 
 import java.util.List;
 
+
 /*
       fill:
         clicksound: ''
@@ -21,7 +22,7 @@ import java.util.List;
           integer:
           - CustomModelData:00000001
 */
-public class GuiItemsData {
+public class GuiItemsData implements Cloneable {
 
 	private String id;
 	private String clickSound;
@@ -53,6 +54,16 @@ public class GuiItemsData {
 		this.setRightAction(rightAction);
 	}
 
+	// clone() is now overridden and is public.
+    public GuiItemsData clone() {
+        try {
+            // call clone in Object.
+            return (GuiItemsData) super.clone();
+        } catch (CloneNotSupportedException e) {
+            return this;
+        }
+    }
+	
 	public String getId() {
 		return id;
 	}

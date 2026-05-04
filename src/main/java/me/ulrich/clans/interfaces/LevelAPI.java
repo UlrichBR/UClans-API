@@ -1,8 +1,8 @@
 package me.ulrich.clans.interfaces;
 
-import java.util.HashMap;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.command.CommandSender;
 
@@ -43,7 +43,7 @@ public interface LevelAPI {
 	
 	boolean setPoint(UUID clanid, int amount, CommandSender sender, StringBuilder reason);
 	
-	HashMap<String, PatentData> getPatentData();
+	ConcurrentHashMap<String, PatentData> getPatentData();
 	
 	
 }

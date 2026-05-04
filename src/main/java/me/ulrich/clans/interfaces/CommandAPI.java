@@ -2,6 +2,7 @@ package me.ulrich.clans.interfaces;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.command.CommandSender;
 
@@ -15,9 +16,9 @@ import me.ulrich.clans.data.CommandData_title;
 
 public interface CommandAPI {
 
-	HashMap<String, String> getCommandAliases();
+	ConcurrentHashMap<String, String> getCommandAliases();
 
-	HashMap<String, String> getMainCommandAliases();
+	ConcurrentHashMap<String, String> getMainCommandAliases();
 
 	String replaceMainCmd(String string);
 
@@ -33,9 +34,9 @@ public interface CommandAPI {
 
 	String findAliasesByValue(String sub);
 	
-	HashMap<String, CommandData> getClanCommander();
+	ConcurrentHashMap<String, CommandData> getClanCommander();
 
-	HashMap<String, CommandData> getUClanCommander();
+	ConcurrentHashMap<String, CommandData> getUClanCommander();
 	
 	void unRegisterCommand(String command);
 

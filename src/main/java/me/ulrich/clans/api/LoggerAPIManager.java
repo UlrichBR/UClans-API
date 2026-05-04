@@ -1,9 +1,9 @@
 package me.ulrich.clans.api;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.Material;
 
@@ -49,7 +49,7 @@ public class LoggerAPIManager implements LoggerAPI {
 	}
 	
 	@Override
-	public HashMap<UUID, List<LoggerData>> getLoggerData() {
+	public ConcurrentHashMap<UUID, List<LoggerData>> getLoggerData() {
 		return null;
 	}
 

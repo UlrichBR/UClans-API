@@ -20,9 +20,11 @@ public class PlayerData {
 	private String role;
 	private long loadCache;
 	private boolean lockedChat;
+	private boolean clan;
+	private String lang;
 
 
-	public PlayerData(UUID id, String name, UUID uuid, int kills, int deaths, int souls, double kdr, long joinDate, long lastSeen, String cache, String nickname, String customSkin, PlayerData_Settings settings, String role, long loadCache, boolean lockedChat) {
+	public PlayerData(UUID id, String name, UUID uuid, int kills, int deaths, int souls, double kdr, long joinDate, long lastSeen, String cache, String nickname, String customSkin, PlayerData_Settings settings, String role, long loadCache, boolean lockedChat, String lang) {
 		this.setId(id);
 		this.setName(name);
 		this.setUuid(uuid);
@@ -39,6 +41,8 @@ public class PlayerData {
 		this.setRole(role);
 		this.setLoadCache(loadCache);
 		this.setLockedChat(lockedChat);
+		this.setClan(false);
+		this.setLang(lang);
 	}
 
 	public UUID getId() {
@@ -169,6 +173,22 @@ public class PlayerData {
 
 	public void setLockedChat(boolean lockedChat) {
 		this.lockedChat = lockedChat;
+	}
+
+	public boolean hasClan() {
+		return clan;
+	}
+
+	public void setClan(boolean clan) {
+		this.clan = clan;
+	}
+
+	public String getLang() {
+		return lang;
+	}
+
+	public void setLang(String lang) {
+		this.lang = lang;
 	}
 
 
