@@ -2,7 +2,6 @@ package me.ulrich.clans.data;
 
 import java.util.Optional;
 
-import org.json.JSONObject;
 
 public class SettingsData {
 
@@ -14,10 +13,10 @@ public class SettingsData {
 	private boolean publicHomes;
 	private boolean receveMailAllies;
 	private boolean receiveMailAll;
-	private Optional<JSONObject> jsonMeta;
+	private Optional<Object> jsonMeta;
 	private boolean allyPvp;
 
-	public SettingsData(Optional<JSONObject> jsonMeta, boolean warInvite, boolean allySharedChat, boolean joinLeave, boolean allySharedHome, boolean opened, boolean publicHomes, boolean receveMailAllies, boolean receiveMailAll, boolean allyPvp) {
+	public SettingsData(Optional<Object> jsonMeta, boolean warInvite, boolean allySharedChat, boolean joinLeave, boolean allySharedHome, boolean opened, boolean publicHomes, boolean receveMailAllies, boolean receiveMailAll, boolean allyPvp) {
 		this.setWarInvite(warInvite);
 		this.setAllySharedChat(allySharedChat);
 		this.setJoinLeave(joinLeave);
@@ -96,11 +95,11 @@ public class SettingsData {
 		this.receiveMailAll = receiveMailAll;
 	}
 
-	public Optional<JSONObject> getJsonMeta() {
+	public Optional<Object> getJsonMeta() {
 		return jsonMeta;
 	}
 
-	public void setJsonMeta(Optional<JSONObject> jsonMeta) {
+	public void setJsonMeta(Optional<Object> jsonMeta) {
 		this.jsonMeta = jsonMeta;
 	}
 
