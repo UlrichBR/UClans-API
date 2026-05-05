@@ -1,0 +1,36 @@
+name: Release Automática
+
+on:
+  push:
+    tags:
+      - '*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4.1.7
+
+      - name: Configurar Java
+        uses: actions/setup-java@v4.2.1
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: Build com Maven
+        run: mvn clean package
+
+      - name: Criar Release e Upload do Plugin
+        uses: softprops/action-gh-release@v2
+        with:
+          files: target/*.jar
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

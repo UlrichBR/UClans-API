@@ -2,6 +2,14 @@ package me.ulrich.clans.data;
 
 public class ClanEnum {
 	
+	public enum ClansModules{
+		Anvil_26,
+		Anvil_1_21,
+		Anvil_1_20,
+		Anvil_1_19,
+		Anvil_1_18,
+	}
+	
 	public enum ClansExtensions{
 		CMIHolograms,
 		DecentHolograms,
@@ -52,7 +60,7 @@ public class ClanEnum {
 		
 	}
 	
-	public enum ExtensionsReturn {
+	public enum RepoReturn {
 		ERROR_REPO, ALREADY_UPDATED, ERROR_DOWNLOAD, SUCCESS_DOWNLOAD, ALREADY_EXISTS, NEED_RELOAD_ADDONS, GENERAL_ERROR
 		
 		
