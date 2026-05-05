@@ -36,16 +36,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Notificar no Discord
-        if: success()
-        run: |
-          curl -X POST -H "Content-Type: application/json" \
-          -d '{
-            "embeds": [{
-              "title": "🚀 API Update!",
-              "description": "**Project:** UltimateClans API\n**Version:** `${{ github.ref_name }}`\n\nThe build is complete (${{ github.server_url }}/${{ github.repository }}/releases/tag/${{ github.ref_name }}).",
-              "color": 3066993,
-              "url": "${{ github.server_url }}/${{ github.repository }}/releases/tag/${{ github.ref_name }}",
-              "footer": { "text": "GitHub - Auto-Release" }
-            }]
-          }' ${{ secrets.DISCORD_WEBHOOK }}
+          if: success()
+	          run: |
+	            curl -X POST -H "Content-Type: application/json" \
+	            -d '{
+	              "embeds": [{
+	                "title": "🚀 API Update!",
+	                "description": "**Project:** UltimateClans API\n**Version:** `${{ github.ref_name }}`\n\nThe build is complete (${{ github.server_url }}/${{ github.repository }}/releases/tag/${{ github.ref_name }}).",
+	                "color": 3066993,
+	                "url": "${{ github.server_url }}/${{ github.repository }}/releases/tag/${{ github.ref_name }}",
+	                "footer": { "text": "GitHub - Auto-Release" }
+	              }]
+	            }' ${{ secrets.DISCORD_WEBHOOK }}
 		  
