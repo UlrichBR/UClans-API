@@ -44,6 +44,10 @@ jobs:
           java-version: ${{ env.MIN_JAVA_VERSION }}
           distribution: 'temurin'
           cache: 'maven'
+          # --- ADICIONE ESTAS LINHAS ABAIXO ---
+          server-id: central
+          server-username: MAVEN_USERNAME
+          server-password: MAVEN_PASSWORD
 
       - name: Notificar Início (Discord)
         run: |
@@ -68,12 +72,13 @@ jobs:
 
       # --- ETAPA ADAPTADA: COMPILA, EXECUTA O FLATTEN, ASSINA E ENVIA PARA O MAVEN CENTRAL ---
       - name: Build e Deploy no Maven Central
+        env:
+          MAVEN_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
         run: |
           mvn clean deploy \
             -B \
             --no-transfer-progress \
-            -Dcentral.username=${{ secrets.SONATYPE_USERNAME }} \
-            -Dcentral.password=${{ secrets.SONATYPE_PASSWORD }} \
             -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }}
 
       - name: Localizar JAR e Processar Metadados
