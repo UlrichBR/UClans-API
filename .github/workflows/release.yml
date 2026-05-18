@@ -61,7 +61,7 @@ jobs:
 
       # --- NOVA ETAPA: CONFIGURAÇÃO DO GPG PARA ASSINAR O ARTEFATO ---
       - name: Configurar Chave GPG
-        uses: samuelmeuli/action-gpg@v1
+        uses: crazy-max/ghaction-import-gpg@v6
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
