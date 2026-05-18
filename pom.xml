@@ -8,7 +8,7 @@
 	<groupId>me.ulrich.clans</groupId>
 	<artifactId>Clans</artifactId>
 	<version>9.0.0</version>
-	<name>Ultimate-API</name>
+	<name>UltimateClans</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>17</java.version>

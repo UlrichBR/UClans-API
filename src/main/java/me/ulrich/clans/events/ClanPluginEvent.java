@@ -9,9 +9,11 @@ public class ClanPluginEvent extends Event implements Cancellable {
 	private static final HandlerList handlers = new HandlerList();
     private boolean cancelled;
 	private boolean enabled;
+	private boolean addons;
 
-    public ClanPluginEvent(boolean enabled) {
+    public ClanPluginEvent(boolean enabled, boolean addons) {
     	this.setEnabled(enabled);
+    	this.setAddons(addons);
 
     }
     
@@ -37,6 +39,14 @@ public class ClanPluginEvent extends Event implements Cancellable {
 
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
+	}
+
+	public boolean isAddons() {
+		return addons;
+	}
+
+	public void setAddons(boolean addons) {
+		this.addons = addons;
 	}
 
 
