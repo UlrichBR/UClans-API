@@ -16,11 +16,17 @@ Choose one of the repositories below to add the UltimateClans API as a dependenc
 The official, fastest, and most stable method. It does not require adding any extra repository to your `pom.xml`, as the Maven ecosystem fetches the artifacts natively.
 
 ```xml
+	dependencies {
+	        implementation("io.github.ulrichbr:UltimateClans:VERSION")
+	}
+```
+
+```xml
 <dependencies>
     <dependency>
         <groupId>io.github.ulrichbr</groupId>
         <artifactId>UltimateClans</artifactId>
-        <version>9.0.0</version> 
+        <version>VERSION</version> 
         <scope>provided</scope>
     </dependency>
 </dependencies>
@@ -28,6 +34,21 @@ The official, fastest, and most stable method. It does not require adding any ex
 
 ### Option 2: JitPack (Alternative)
 Use this option if you need to compile specific commits from branches or legacy versions hosted directly on the GitHub repository.
+
+```xml
+
+	dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
+	dependencies {
+	        implementation 'com.github.UlrichBR:UClans-API:VERSION'
+	}
+```
 
 ```xml
 <repositories>
@@ -41,7 +62,7 @@ Use this option if you need to compile specific commits from branches or legacy 
     <dependency>
         <groupId>com.github.UlrichBR</groupId>
         <artifactId>UClans-API</artifactId>
-        <version>9.0.0</version> 
+        <version>VERSION</version> 
         <scope>provided</scope>
     </dependency>
 </dependencies>

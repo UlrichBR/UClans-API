@@ -27,7 +27,7 @@
 	<scm>
 		<connection>scm:git:git://github.com/UlrichBR/UClans-API.git</connection>
 		<developerConnection>scm:git:ssh://github.com/UlrichBR/UClans-API.git</developerConnection>
-		<url>https://github.com/UlrichBR/UClans-APItree/main</url>
+		<url>https://github.com/UlrichBR/UClans-API/tree/main</url>
 	</scm>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
