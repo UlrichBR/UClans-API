@@ -1,40 +1,43 @@
 package me.ulrich.clans.manager.utils;
 
-
 import java.io.File;
-import java.io.InputStream;
 
 import org.bukkit.configuration.file.FileConfiguration;
-
+import org.bukkit.plugin.Plugin;
 
 public class Files {
 
-	
-	public Files(String path, String name, String resource, String extension) {
-	
-	}
-	
-	public FileConfiguration get() {
+
+    public Files(Plugin plugin, File folder, String path, String name, String resource, String extension) {
+
+    }
+
+    public FileConfiguration get() {
 		return null;
-	}
-	
-	public File getFile() {
+        
+    }
+
+    public File getFile() {
 		return null;
-	}
-	
-	public void save() {
+        
+    }
 
-	}
-	
-	public void reload() {
+    public String getName() {
+		return null;
+       
+    }
 
-	}
-	
-	public static void copy(InputStream is, File file) {
+    public void save() {
 
-	}
-	
-	public Files getFileManager() {
-		return this;
-	}
+    }
+
+    public void reload() {
+
+    }
+
+    public Files getFileManager() {
+        return this;
+    }
+
+
 }
