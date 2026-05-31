@@ -47,4 +47,9 @@ public class ColorAPIManager implements ColorAPI {
 		return null;
 	}
 
+	@Override
+	public String addLegacyColor(String text) {
+		return null;
+	}
+
 }
