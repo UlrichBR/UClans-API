@@ -63,10 +63,6 @@ public interface ClanAPI {
 
 	void clanMessageSend(UUID id, String text);
 
-	void clanChatSend(Player sender, String message, boolean offsync);
-
-	void clanChatSend(UUID sender, String message, boolean offsync);
-
 	boolean promotePlayer(UUID id, UUID promoted, Optional<ModerationData> mod);
 
 	boolean demotePlayer(UUID id, UUID demoted, Optional<ModerationData> mod);

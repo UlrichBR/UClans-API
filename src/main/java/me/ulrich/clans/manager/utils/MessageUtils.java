@@ -39,10 +39,6 @@ public class MessageUtils {
 
 	}
 
-	public static String formatClanChat(UUID playerUUID, String message) {
-		return null;
-	}
-
 	public static void allOnlineMessage(String message, List<String> data, List<Player> excludeplayers) {
 
 	}

@@ -148,17 +148,6 @@ public class ClanAPIManager implements ClanAPI {
 		
 	}
 
-	@Override
-	public void clanChatSend(Player sender, String message, boolean offsync) {
-
-		
-	}
-
-	@Override
-	public void clanChatSend(UUID sender, String message, boolean offsync) {
-
-		
-	}
 
 	@Override
 	public boolean promotePlayer(UUID id, UUID promoted, Optional<ModerationData> mod) {
