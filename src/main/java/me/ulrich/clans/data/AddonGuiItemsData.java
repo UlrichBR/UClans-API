@@ -2,8 +2,6 @@ package me.ulrich.clans.data;
 
 import java.util.List;
 
-import me.ulrich.clans.data.GuiItemsData_fill;
-import me.ulrich.clans.data.NbtData;
 
 /*
       fill:

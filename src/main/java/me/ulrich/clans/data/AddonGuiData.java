@@ -9,11 +9,12 @@ public class AddonGuiData {
 	private String opensound;
 	private HashMap<String, AddonGuiItemsData> items;
 	private int rows;
+	private int pageSize;
 
-
-	public AddonGuiData(String id, String title, int rows, String opensound, HashMap<String, AddonGuiItemsData> items) {
+	public AddonGuiData(String id, String title, int rows, int pageSize, String opensound, HashMap<String, AddonGuiItemsData> items) {
 		this.setId(id);
 		this.setTitle(title);
+		this.setPageSize(pageSize);
 		this.setOpensound(opensound);
 		this.setRows(rows);
 		this.setItems(items);
@@ -57,6 +58,14 @@ public class AddonGuiData {
 
 	public void setRows(int rows) {
 		this.rows = rows;
+	}
+
+	public int getPageSize() {
+		return pageSize;
+	}
+
+	public void setPageSize(int pageSize) {
+		this.pageSize = pageSize;
 	}
 
 }

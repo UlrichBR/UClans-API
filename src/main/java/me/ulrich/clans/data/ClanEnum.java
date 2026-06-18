@@ -75,10 +75,6 @@ public class ClanEnum {
 		ALL, DAILY, WEEKLY, MONTHLY, YEARLY,
 	}
 	
-	public enum MailTime{
-		ALL, READ, UNREAD,
-	}
-	
 	public enum PlayerLeaveReaction{
 		KICK, LEAVE;
 	}
