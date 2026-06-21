@@ -33,6 +33,7 @@ import me.ulrich.clans.data.AddonInfo;
 import me.ulrich.clans.data.Extension;
 import me.ulrich.clans.data.Module;
 import me.ulrich.clans.interfaces.UClans;
+import me.ulrich.clans.manager.IntegrationManager;
 import me.ulrich.clans.manager.DatabaseManager.DataEnum;
 
 public final class Clans extends JavaPlugin implements UClans{
@@ -72,6 +73,8 @@ public final class Clans extends JavaPlugin implements UClans{
 	private EntityAPIManager entityAPI;
 	private AnvilAPIManager anvilAPI;
 	private ColorAPIManager colorAPI;
+	private IntegrationManager integrationManager;
+
 
 
 	public Clans() {
@@ -266,6 +269,10 @@ public final class Clans extends JavaPlugin implements UClans{
 	@Override
 	public void loadModules() {
 		
+	}
+	
+	public IntegrationManager getIntegrationManager() {
+		return integrationManager;
 	}
 
 }

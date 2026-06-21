@@ -1,41 +1,88 @@
 package me.ulrich.clans.data;
 
+import me.ulrich.clans.manager.utils.VersionUtil;
+
 public class ClanEnum {
-	
-	public enum ClansModules{
-		Anvil_26,
-		Anvil_1_21,
-		Anvil_1_20,
-		Anvil_1_19,
-		Anvil_1_18,
+
+	public enum MailTime{
+		ALL, READ, UNREAD,
 	}
 	
-	public enum ClansExtensions{
-		CMIHolograms,
-		DecentHolograms,
-		Dynmap,
-		ElementalGems,
-		Holograms,
-		HolographicDisplays,
-		PlayerPoints,
-		TokenEnchantMoney,
-		Vault,
-		WorldGuardRegion,
-		FancyHolograms,
-		GriefPrevention,
-		GriefDefender,
-		TAB,
-		CMIScoreboard,
-		FeatherBoard,
-		SternalBoard,
-		SimpleScore,
-		BlueMap,
-		AnimatedScoreboard,
-		Eco,
-		TNE,
-		ProtectionStones,
-		HuskClaims,
+	public enum ClansModules {
+	    // Módulos específicos por versão (Anvil)
+	    Anvil_26("Anvil_26", VersionUtil.VersionEnum.V261),
+	    Anvil_1_21("Anvil_1_21", VersionUtil.VersionEnum.V121), // Ou mapeie para V1211 se preferir
+	    Anvil_1_20("Anvil_1_20", VersionUtil.VersionEnum.V120),
+	    Anvil_1_19("Anvil_1_19", VersionUtil.VersionEnum.V119),
+	    Anvil_1_18("Anvil_1_18", VersionUtil.VersionEnum.V118),
+	    
+	    // Módulos universais (sem versão atrelada)
+	    Chat("Chat", null);
 
+	    private final String pluginName;
+	    private final VersionUtil.VersionEnum targetVersion;
+
+	    ClansModules(String pluginName, VersionUtil.VersionEnum targetVersion) {
+	        this.pluginName = pluginName;
+	        this.targetVersion = targetVersion;
+	    }
+
+	    public String getPluginName() {
+	        return this.pluginName;
+	    }
+
+	    public VersionUtil.VersionEnum getTargetVersion() {
+	        return this.targetVersion;
+	    }
+	    
+	    /**
+	     * Verifica se este módulo é compatível com a versão atual do servidor.
+	     */
+	    public boolean isCompatibleWithServer() {
+	        // Se não tem versão alvo (null), significa que é universal (Banner, Home, etc)
+	        if (this.targetVersion == null) {
+	            return true; 
+	        }
+	        
+	        // Se for um módulo de Anvil, verifica se a versão limpa do servidor bate com a do enum
+	        return VersionUtil.is(this.targetVersion);
+	    }
+	}
+	
+	public enum ClansExtensions {
+	    CMIHolograms("CMI"),
+	    DecentHolograms("DecentHolograms"),
+	    Dynmap("dynmap"),
+	    ElementalGems("ElementalGems"),
+	    Holograms("Holograms"),
+	    HolographicDisplays("HolographicDisplays"),
+	    PlayerPoints("PlayerPoints"),
+	    TokenEnchantMoney("TokenEnchant"),
+	    Vault("Vault"),
+	    WorldGuardRegion("WorldGuard"),
+	    FancyHolograms("FancyHolograms"),
+	    GriefPrevention("GriefPrevention"),
+	    GriefDefender("GriefDefender"),
+	    TAB("TAB"),
+	    CMIScoreboard("CMI"),
+	    FeatherBoard("FeatherBoard"),
+	    SternalBoard("SternalBoard"),
+	    SimpleScore("SimpleScore"),
+	    BlueMap("BlueMap"),
+	    AnimatedScoreboard("AnimatedScoreboard"),
+	    Eco("eco"),
+	    ProtectionStones("ProtectionStones"),
+	    HuskClaims("HuskClaims");
+
+	    private final String pluginName;
+
+	    ClansExtensions(String pluginName) {
+	        this.pluginName = pluginName;
+	    }
+
+	    public String getPluginName() {
+	        return this.pluginName;
+	    }
 	}
 	
 	
@@ -61,7 +108,7 @@ public class ClanEnum {
 	}
 	
 	public enum RepoReturn {
-		ERROR_REPO, ALREADY_UPDATED, ERROR_DOWNLOAD, SUCCESS_DOWNLOAD, ALREADY_EXISTS, NEED_RELOAD_ADDONS, GENERAL_ERROR
+		ERROR_REPO, ALREADY_UPDATED, ERROR_DOWNLOAD, SUCCESS_DOWNLOAD, SUCCESS_DOWNLOAD_RELOAD, ALREADY_EXISTS, NEED_RELOAD_ADDONS, GENERAL_ERROR
 		
 		
 	}
@@ -75,6 +122,7 @@ public class ClanEnum {
 		ALL, DAILY, WEEKLY, MONTHLY, YEARLY,
 	}
 	
+
 	public enum PlayerLeaveReaction{
 		KICK, LEAVE;
 	}
