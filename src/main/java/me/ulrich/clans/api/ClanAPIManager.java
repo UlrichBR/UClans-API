@@ -6,10 +6,8 @@ import java.util.Optional;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
 
 import me.ulrich.clans.Clans;
 import me.ulrich.clans.data.ClanData;
@@ -19,7 +17,6 @@ import me.ulrich.clans.data.ClanEnum.RivalRemoveReturn;
 import me.ulrich.clans.data.ClanEnum.SettingsFlagsAccept;
 import me.ulrich.clans.data.ClanEnum.SettingsType;
 import me.ulrich.clans.data.EncodedLocationData;
-import me.ulrich.clans.data.HomesData;
 import me.ulrich.clans.data.ModerationData;
 import me.ulrich.clans.interfaces.ClanAPI;
 
@@ -215,58 +212,6 @@ public class ClanAPIManager implements ClanAPI {
 		return false;
 	}
 
-	@Override
-	public boolean deleteBanner(UUID clanUUID, Player player) {
-
-		return false;
-	}
-
-	@Override
-	public boolean setBanner(UUID clanUUID, Player player, ItemStack itemstack) {
-
-		return false;
-	}
-	
-	@Override
-	public Optional<ItemStack> getBanner(UUID clanUUID){
-		return Optional.empty();
-	}
-
-	@Override
-	public boolean hasHome(UUID playerUUID, String home) {
-
-		return false;
-	}
-
-	@Override
-	public boolean setHome(UUID player, Location location, String name) {
-
-		return false;
-	}
-
-	@Override
-	public boolean deleteHome(UUID playerUUID, String name) {
-
-		return false;
-	}
-
-	@Override
-	public Optional<Location> getHomeLocation(UUID player, String home) {
-
-		return Optional.empty();
-	}
-
-	@Override
-	public Optional<EncodedLocationData> getEncodedHomeLocation(UUID player, String home) {
-
-		return Optional.empty();
-	}
-
-	@Override
-	public Optional<HomesData> getHomeData(UUID player, String home) {
-
-		return Optional.empty();
-	}
 
 	@Override
 	public boolean deleteClan(UUID uuid) {
@@ -430,11 +375,6 @@ public class ClanAPIManager implements ClanAPI {
 		return false;
 	}
 
-	@Override
-	public boolean tryCreateHome(Player player, String name) {
-
-		return false;
-	}
 
 	@Override
 	public boolean tryCreateClan(Player player, String tag) {

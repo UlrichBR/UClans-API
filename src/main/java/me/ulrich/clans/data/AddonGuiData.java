@@ -2,7 +2,7 @@ package me.ulrich.clans.data;
 
 import java.util.HashMap;
 
-public class AddonGuiData {
+public class AddonGuiData implements Cloneable {
 
 	private String id;
 	private String title;
@@ -11,6 +11,9 @@ public class AddonGuiData {
 	private int rows;
 	private int pageSize;
 
+
+
+	
 	public AddonGuiData(String id, String title, int rows, int pageSize, String opensound, HashMap<String, AddonGuiItemsData> items) {
 		this.setId(id);
 		this.setTitle(title);
@@ -20,6 +23,15 @@ public class AddonGuiData {
 		this.setItems(items);
 	}
 
+    public AddonGuiData clone() {
+        try {
+            // call clone in Object.
+            return (AddonGuiData) super.clone();
+        } catch (CloneNotSupportedException e) {
+            return this;
+        }
+    }
+	
 	public String getId() {
 		return id;
 	}

@@ -5,14 +5,13 @@ import java.util.Optional;
 import java.util.UUID;
 
 import org.bukkit.Material;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import me.ulrich.clans.data.BannerGroupData;
 import me.ulrich.clans.data.ClanEnum.BannerFilter;
 
 public interface BannerModuleAPI {
-
-	public String parseText(UUID player, String text);
 	
 	public boolean canUploadMaterial(UUID clanUUID, ItemStack itemstack);
 
@@ -31,5 +30,11 @@ public interface BannerModuleAPI {
 	public List<Material> collectItemsByPrefixSuffix(final String prefix, final String suffix);
 	
 	public List<Material> collectItemsByAll();
+	
+	public boolean deleteBanner(UUID clanUUID, Player player);
+
+	public boolean setBanner(UUID clanid, Player player, ItemStack itemstack);
+
+	public Optional<ItemStack> getBanner(UUID clanid);
 
 }

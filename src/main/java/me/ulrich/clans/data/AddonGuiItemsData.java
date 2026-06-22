@@ -2,27 +2,7 @@ package me.ulrich.clans.data;
 
 import java.util.List;
 
-
-/*
-      fill:
-        clicksound: ''
-        material: STAINED_GLASS_PANE
-        amount: 1
-        data: 15
-        glow: false
-        slot: 7
-        name: ''
-        # use | to break line
-        lore: ''
-        # %player%, nicknames or base64Textures
-        texture: ''
-        nbt:
-          string:
-          - example:example_nbt_string
-          integer:
-          - CustomModelData:00000001
-*/
-public class AddonGuiItemsData {
+public class AddonGuiItemsData implements Cloneable {
 
 	private String id;
 	private String clickSound;
@@ -53,6 +33,15 @@ public class AddonGuiItemsData {
 		this.setLeftActions(leftAction);
 		this.setRightAction(rightAction);
 	}
+	
+    public AddonGuiItemsData clone() {
+        try {
+            // call clone in Object.
+            return (AddonGuiItemsData) super.clone();
+        } catch (CloneNotSupportedException e) {
+            return this;
+        }
+    }
 
 	public String getId() {
 		return id;

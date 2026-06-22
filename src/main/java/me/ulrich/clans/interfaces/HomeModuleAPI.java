@@ -9,8 +9,6 @@ import me.ulrich.clans.data.EncodedLocationData;
 import me.ulrich.clans.data.HomesData;
 
 public interface HomeModuleAPI {
-
-	public String parseText(UUID player, String text);
 	
 	public boolean deleteHome(UUID playerUUID, String name);
 

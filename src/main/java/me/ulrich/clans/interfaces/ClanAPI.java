@@ -6,10 +6,8 @@ import java.util.Optional;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
 
 import me.ulrich.clans.data.ClanData;
 import me.ulrich.clans.data.EncodedLocationData;
@@ -18,7 +16,6 @@ import me.ulrich.clans.data.ClanEnum.PlaceholderTop;
 import me.ulrich.clans.data.ClanEnum.RivalRemoveReturn;
 import me.ulrich.clans.data.ClanEnum.SettingsFlagsAccept;
 import me.ulrich.clans.data.ClanEnum.SettingsType;
-import me.ulrich.clans.data.HomesData;
 import me.ulrich.clans.data.ModerationData;
 
 public interface ClanAPI {
@@ -85,24 +82,6 @@ public interface ClanAPI {
 
 	boolean toggleFF(ClanData clan);
 
-	boolean deleteBanner(UUID clanUUID, Player player);
-
-	boolean setBanner(UUID clanUUID, Player player, ItemStack itemstack);
-
-	Optional<ItemStack> getBanner(UUID clanUUID);
-
-	boolean hasHome(UUID playerUUID, String home);
-
-	boolean setHome(UUID player, Location location, String name);
-
-	boolean deleteHome(UUID playerUUID, String name);
-
-	Optional<Location> getHomeLocation(UUID player, String home);
-
-	Optional<EncodedLocationData> getEncodedHomeLocation(UUID player, String home);
-
-	Optional<HomesData> getHomeData(UUID player, String home);
-
 	boolean deleteClan(UUID uuid);
 
 	boolean deletePlayerClan(UUID player);
@@ -158,8 +137,6 @@ public interface ClanAPI {
 	boolean tryChangeModtag(Player player, String tag);
 
 	boolean tryChangeDesc(Player player, String desc);
-
-	boolean tryCreateHome(Player player,String name);
 
 	boolean tryCreateClan(Player player, String tag);
 
