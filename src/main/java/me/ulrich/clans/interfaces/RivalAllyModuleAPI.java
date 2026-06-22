@@ -7,6 +7,8 @@ import me.ulrich.clans.data.ClanEnum.RivalRemoveReturn;
 
 public interface RivalAllyModuleAPI {
 
+	public String parseText(UUID player, String text);
+	
 	public AllyInviteReturn allySend(UUID senderid1, UUID receiverid2, boolean mult);
 	
 	public boolean allyAdd(UUID clanid1, UUID clanid2);

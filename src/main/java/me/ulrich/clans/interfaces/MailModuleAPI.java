@@ -9,6 +9,8 @@ import me.ulrich.clans.data.MailData;
 
 public interface MailModuleAPI {
 	
+	public String parseText(UUID player, String text);
+	
 	public void SaveMailData(MailData log);
 
 	public void DeleteMailData(UUID logID);

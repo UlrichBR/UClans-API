@@ -10,6 +10,8 @@ import me.ulrich.clans.data.HomesData;
 
 public interface HomeModuleAPI {
 
+	public String parseText(UUID player, String text);
+	
 	public boolean deleteHome(UUID playerUUID, String name);
 
 	public boolean setHome(UUID player, Location location, String name);

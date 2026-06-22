@@ -12,6 +12,8 @@ import me.ulrich.clans.data.LoggerData;
 
 public interface LoggerModuleAPI {
 
+	public String parseText(UUID player, String text);
+	
 	public void SaveLoggerData(LoggerData log);
 
 	public void DeleteLoggerData(LoggerData log);

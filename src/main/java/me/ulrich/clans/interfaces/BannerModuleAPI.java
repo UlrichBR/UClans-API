@@ -12,6 +12,8 @@ import me.ulrich.clans.data.ClanEnum.BannerFilter;
 
 public interface BannerModuleAPI {
 
+	public String parseText(UUID player, String text);
+	
 	public boolean canUploadMaterial(UUID clanUUID, ItemStack itemstack);
 
 	public List<Material> getAllBannerEnabledListDistict(UUID clanUUID);
