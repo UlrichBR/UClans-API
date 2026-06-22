@@ -17,9 +17,7 @@ import me.ulrich.clans.api.EventAPIManager;
 import me.ulrich.clans.api.GuiAPIManager;
 import me.ulrich.clans.api.HologramAPIManager;
 import me.ulrich.clans.api.HooksAPIManager;
-import me.ulrich.clans.api.LevelAPIManager;
 import me.ulrich.clans.api.LibAPIManager;
-import me.ulrich.clans.api.LoggerAPIManager;
 import me.ulrich.clans.api.MapAPIManager;
 import me.ulrich.clans.api.ModerationAPIManager;
 import me.ulrich.clans.api.MoneyAPIManager;
@@ -33,8 +31,8 @@ import me.ulrich.clans.data.AddonInfo;
 import me.ulrich.clans.data.Extension;
 import me.ulrich.clans.data.Module;
 import me.ulrich.clans.interfaces.UClans;
-import me.ulrich.clans.manager.IntegrationManager;
 import me.ulrich.clans.manager.DatabaseManager.DataEnum;
+import me.ulrich.clans.manager.IntegrationManager;
 
 public final class Clans extends JavaPlugin implements UClans{
 
@@ -57,9 +55,7 @@ public final class Clans extends JavaPlugin implements UClans{
 	private final LibAPIManager libAPI;
 	private final AddonAPIManager AddonAPI;
 	private final ModerationAPIManager modAPI;
-	private final LevelAPIManager levelAPI;
 	private final CommandAPIManager commandAPI;
-	private final LoggerAPIManager loggerAPI;
 	private final DiscordAPIManager discordAPI;
 	private final SyncAPIManager syncAPI;
 	private final RegionAPIManager regionAPI;
@@ -87,9 +83,7 @@ public final class Clans extends JavaPlugin implements UClans{
 		this.AddonAPI = null;
 		this.libAPI = null;
 		this.modAPI = null;
-		this.levelAPI = null;
 		this.commandAPI = null;
-		this.loggerAPI = null;
 		this.discordAPI = null;
 		this.syncAPI = null;
 		this.regionAPI = null;
@@ -168,11 +162,6 @@ public final class Clans extends JavaPlugin implements UClans{
 	public void registerEvents() {}
 
 	@Override
-	public LevelAPIManager getLevelAPI() {
-		return null;
-	}
-
-	@Override
 	public ModerationAPIManager getModAPI() {
 		return null;
 	}
@@ -184,10 +173,7 @@ public final class Clans extends JavaPlugin implements UClans{
 	public CommandAPIManager getCommandAPI() {
 		return null;
 	}
-	
-	public LoggerAPIManager getLoggerAPI() {
-		return null;
-	}
+
 	public DiscordAPIManager getDiscordAPI() {
 		return null;
 	}
@@ -263,7 +249,7 @@ public final class Clans extends JavaPlugin implements UClans{
 	}
 
 	public ColorAPIManager getColorAPI() {
-		return colorAPI;
+		return null;
 	}
 
 	@Override
@@ -272,7 +258,8 @@ public final class Clans extends JavaPlugin implements UClans{
 	}
 	
 	public IntegrationManager getIntegrationManager() {
-		return integrationManager;
+		return null;
 	}
+
 
 }

@@ -11,6 +11,7 @@ import com.github.Anon8281.universalScheduler.scheduling.schedulers.TaskSchedule
 import com.github.Anon8281.universalScheduler.scheduling.tasks.MyScheduledTask;
 
 import me.ulrich.clans.data.ClanEnum.TranslatableKey;
+import me.ulrich.clans.tasks.AsyncTaskExecutor;
 import net.kyori.adventure.platform.bukkit.BukkitAudiences;
 
 public interface LibAPI {
@@ -56,6 +57,8 @@ public interface LibAPI {
 	boolean isFolia();
 	
 	TaskScheduler getScheduler();
+	
+	AsyncTaskExecutor getAsyncTaskExecutor();
 	
 	ConcurrentHashMap<UUID, MyScheduledTask> getBossbarTasks();
 	

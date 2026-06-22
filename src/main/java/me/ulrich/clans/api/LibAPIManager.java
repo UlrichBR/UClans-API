@@ -13,6 +13,7 @@ import com.github.Anon8281.universalScheduler.scheduling.tasks.MyScheduledTask;
 import me.ulrich.clans.Clans;
 import me.ulrich.clans.data.ClanEnum.TranslatableKey;
 import me.ulrich.clans.interfaces.LibAPI;
+import me.ulrich.clans.tasks.AsyncTaskExecutor;
 import net.kyori.adventure.platform.bukkit.BukkitAudiences;
 
 public class LibAPIManager implements LibAPI {
@@ -163,6 +164,11 @@ public class LibAPIManager implements LibAPI {
 	@Override
 	public boolean playSound(Player p, String sound) {
 		return false;
+	}
+
+	@Override
+	public AsyncTaskExecutor getAsyncTaskExecutor() {
+		return null;
 	}
 
 }

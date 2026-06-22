@@ -15,9 +15,7 @@ import me.ulrich.clans.api.EventAPIManager;
 import me.ulrich.clans.api.GuiAPIManager;
 import me.ulrich.clans.api.HologramAPIManager;
 import me.ulrich.clans.api.HooksAPIManager;
-import me.ulrich.clans.api.LevelAPIManager;
 import me.ulrich.clans.api.LibAPIManager;
-import me.ulrich.clans.api.LoggerAPIManager;
 import me.ulrich.clans.api.MapAPIManager;
 import me.ulrich.clans.api.ModerationAPIManager;
 import me.ulrich.clans.api.MoneyAPIManager;
@@ -42,15 +40,11 @@ public interface UClans {
 	AddonAPIManager getAddonAPI();
 	
 	LibAPIManager getLibAPI();
-	
-	LevelAPIManager getLevelAPI();
-	
+		
 	ModerationAPIManager getModAPI();
 	
 	CommandAPIManager getCommandAPI();
-	
-	LoggerAPIManager getLoggerAPI();
-	
+		
 	DiscordAPIManager getDiscordAPI();
 	
 	SyncAPIManager getSyncAPI();
