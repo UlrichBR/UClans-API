@@ -9,6 +9,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import me.ulrich.clans.data.BannerGroupData;
+import me.ulrich.clans.data.ClanData;
 import me.ulrich.clans.data.ClanEnum.BannerFilter;
 
 public interface BannerModuleAPI {
@@ -36,5 +37,7 @@ public interface BannerModuleAPI {
 	public boolean setBanner(UUID clanid, Player player, ItemStack itemstack);
 
 	public Optional<ItemStack> getBanner(UUID clanid);
+	
+	Optional<BannerGroupData> bannerCount(ClanData clan);
 
 }

@@ -5,6 +5,7 @@ import java.util.UUID;
 
 import org.bukkit.Location;
 
+import me.ulrich.clans.data.ClanData;
 import me.ulrich.clans.data.EncodedLocationData;
 import me.ulrich.clans.data.HomesData;
 
@@ -23,5 +24,10 @@ public interface HomeModuleAPI {
 	public Optional<EncodedLocationData> getEncodedHomeLocation(UUID player, String home);
 
 	public Optional<HomesData> getHomeData(UUID player, String home);
+	
+	public int homeCount(ClanData clan);
+	
+	public String parseText(UUID player, String text);
+
 	
 }
