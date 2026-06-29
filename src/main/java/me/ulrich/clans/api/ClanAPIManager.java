@@ -11,9 +11,7 @@ import org.bukkit.entity.Player;
 
 import me.ulrich.clans.Clans;
 import me.ulrich.clans.data.ClanData;
-import me.ulrich.clans.data.ClanEnum.AllyInviteReturn;
 import me.ulrich.clans.data.ClanEnum.PlaceholderTop;
-import me.ulrich.clans.data.ClanEnum.RivalRemoveReturn;
 import me.ulrich.clans.data.ClanEnum.SettingsFlagsAccept;
 import me.ulrich.clans.data.ClanEnum.SettingsType;
 import me.ulrich.clans.data.EncodedLocationData;
@@ -87,54 +85,6 @@ public class ClanAPIManager implements ClanAPI {
 
 	@Override
 	public boolean verifyClan(UUID clanUUID) {
-
-		return false;
-	}
-
-	@Override
-	public boolean allyAdd(UUID clanUUID1, UUID clanUUID2) {
-
-		return false;
-	}
-
-	@Override
-	public boolean allyRemove(UUID clanUUID1, UUID clanUUID2) {
-
-		return false;
-	}
-
-	@Override
-	public AllyInviteReturn allySend(UUID senderid, UUID receiverid, boolean mult) {
-
-		return null;
-	}
-
-	@Override
-	public boolean rivalAdd(UUID clanUUID1, UUID clanUUID2) {
-
-		return false;
-	}
-
-	@Override
-	public boolean rivalRemove(UUID clanUUID1, UUID clanUUID2) {
-
-		return false;
-	}
-
-	@Override
-	public RivalRemoveReturn rivalRemoveSend(UUID senderid, UUID receiverid, boolean mult) {
-
-		return null;
-	}
-
-	@Override
-	public boolean isClanAlly(UUID clan1uuid, UUID clan2uuid) {
-
-		return false;
-	}
-
-	@Override
-	public boolean isClanRival(UUID clan1uuid, UUID clan2uuid) {
 
 		return false;
 	}

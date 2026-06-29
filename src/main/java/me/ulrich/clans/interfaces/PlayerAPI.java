@@ -96,10 +96,6 @@ public interface PlayerAPI {
 
 	void tryDamageIndicator(Player attacker, Player victim, double damage);
 
-	boolean isRival(UUID playerUUID1, UUID playerUUID2);
-
-	boolean isAlly(UUID playerUUID1, UUID playerUUID2);
-
 	boolean leaveClan(Player player);
 
 	boolean leaveClan(UUID uuid);

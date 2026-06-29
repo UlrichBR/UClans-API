@@ -10,12 +10,10 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import me.ulrich.clans.data.ClanData;
-import me.ulrich.clans.data.EncodedLocationData;
-import me.ulrich.clans.data.ClanEnum.AllyInviteReturn;
 import me.ulrich.clans.data.ClanEnum.PlaceholderTop;
-import me.ulrich.clans.data.ClanEnum.RivalRemoveReturn;
 import me.ulrich.clans.data.ClanEnum.SettingsFlagsAccept;
 import me.ulrich.clans.data.ClanEnum.SettingsType;
+import me.ulrich.clans.data.EncodedLocationData;
 import me.ulrich.clans.data.ModerationData;
 
 public interface ClanAPI {
@@ -41,22 +39,6 @@ public interface ClanAPI {
 	Optional<ClanData> getClan(UUID clanUUID);
 
 	boolean verifyClan(UUID clanUUID);
-
-	boolean allyAdd(UUID clanUUID1, UUID clanUUID2);
-
-	boolean allyRemove(UUID clanUUID1, UUID clanUUID2);
-
-	AllyInviteReturn allySend(UUID senderid, UUID receiverid, boolean mult);
-
-	boolean rivalAdd(UUID clanUUID1, UUID clanUUID2);
-
-	boolean rivalRemove(UUID clanUUID1, UUID clanUUID2);
-
-	RivalRemoveReturn rivalRemoveSend(UUID senderid, UUID receiverid, boolean mult);
-
-	boolean isClanAlly(UUID clan1UUID, UUID clan2UUID);
-
-	boolean isClanRival(UUID clan1UUID, UUID clan2UUID);
 
 	void clanMessageSend(UUID id, String text);
 

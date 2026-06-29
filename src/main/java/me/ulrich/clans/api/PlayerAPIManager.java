@@ -1,6 +1,5 @@
 package me.ulrich.clans.api;
 
-import java.util.HashMap;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
@@ -256,17 +255,6 @@ public class PlayerAPIManager implements PlayerAPI {
 		
 	}
 
-	@Override
-	public boolean isRival(UUID playerUUID1, UUID playerUUID2) {
-
-		return false;
-	}
-
-	@Override
-	public boolean isAlly(UUID playerUUID1, UUID playerUUID2) {
-
-		return false;
-	}
 
 	@Override
 	public boolean leaveClan(Player player) {
