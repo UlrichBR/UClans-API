@@ -14,12 +14,14 @@ public class ClanChatEvent extends Event implements Cancellable {
 	private final UUID clanID;
 	private final String message;
 	private final UUID sender;
+	private String rawMessage;
 
-    public ClanChatEvent(UUID clanID, UUID sender, String message) {
+    public ClanChatEvent(UUID clanID, UUID sender, String message, String rawMessage) {
 
     	this.clanID = clanID;
     	this.message = message;
     	this.sender = sender;
+    	this.setRawMessage(rawMessage);
 
     }
     
@@ -50,6 +52,14 @@ public class ClanChatEvent extends Event implements Cancellable {
 
 	public UUID getSender() {
 		return sender;
+	}
+
+	public String getRawMessage() {
+		return rawMessage;
+	}
+
+	public void setRawMessage(String rawMessage) {
+		this.rawMessage = rawMessage;
 	}
 
 
