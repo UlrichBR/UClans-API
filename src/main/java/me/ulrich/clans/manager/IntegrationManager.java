@@ -3,6 +3,7 @@ package me.ulrich.clans.manager;
 import java.util.Optional;
 import me.ulrich.clans.Clans;
 import me.ulrich.clans.interfaces.BannerModuleAPI;
+import me.ulrich.clans.interfaces.DiscordModuleAPI;
 import me.ulrich.clans.interfaces.HomeModuleAPI;
 import me.ulrich.clans.interfaces.LevelupModuleAPI;
 import me.ulrich.clans.interfaces.LoggerModuleAPI;
@@ -13,6 +14,14 @@ public class IntegrationManager {
 
     public IntegrationManager(Clans plugin) {
         
+    }
+    
+    public void registerDiscordAPI(DiscordModuleAPI api) {
+       
+    }
+    
+    public void unregisterDiscordAPI(DiscordModuleAPI api) {
+   
     }
 
     public void registerMailAPI(MailModuleAPI api) {
@@ -84,6 +93,10 @@ public class IntegrationManager {
     }
     
     public Optional<BannerModuleAPI> getBanner() {
+    	return Optional.empty();
+    }
+    
+    public Optional<DiscordModuleAPI> getDiscordAPI() {
     	return Optional.empty();
     }
 
