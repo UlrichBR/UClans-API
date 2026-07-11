@@ -9,7 +9,6 @@ import me.ulrich.clans.api.ClaimAPIManager;
 import me.ulrich.clans.api.ClanAPIManager;
 import me.ulrich.clans.api.ColorAPIManager;
 import me.ulrich.clans.api.CommandAPIManager;
-import me.ulrich.clans.api.DiscordAPIManager;
 import me.ulrich.clans.api.EntityAPIManager;
 import me.ulrich.clans.api.EventAPIManager;
 import me.ulrich.clans.api.GuiAPIManager;
@@ -44,9 +43,7 @@ public interface UClans {
 	ModerationAPIManager getModAPI();
 	
 	CommandAPIManager getCommandAPI();
-		
-	DiscordAPIManager getDiscordAPI();
-	
+			
 	SyncAPIManager getSyncAPI();
 	
 	MoneyAPIManager getMoneyAPI();
