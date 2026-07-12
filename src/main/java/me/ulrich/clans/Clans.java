@@ -253,6 +253,14 @@ public final class Clans extends JavaPlugin implements UClans{
 	public IntegrationManager getIntegrationManager() {
 		return null;
 	}
+	
+	public String getResourceUid() {
+		return null;
+	}
+	
+	public String getResourceAgent() {
+		return null;
+	}
 
 
 }
