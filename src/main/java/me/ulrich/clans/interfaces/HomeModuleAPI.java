@@ -27,7 +27,6 @@ public interface HomeModuleAPI {
 	
 	public int homeCount(ClanData clan);
 	
-	public String parseText(UUID player, String text);
-
+	public String parseText(UUID player, String identifier);
 	
 }

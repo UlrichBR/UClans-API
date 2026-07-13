@@ -3,14 +3,13 @@ package me.ulrich.clans.interfaces;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 import me.ulrich.clans.data.ClanEnum.MailTime;
 import me.ulrich.clans.data.MailData;
 
 public interface MailModuleAPI {
-	
-	public String parseText(UUID player, String text);
-	
+		
 	public void SaveMailData(MailData log);
 
 	public void DeleteMailData(UUID logID);
@@ -38,5 +37,9 @@ public interface MailModuleAPI {
 	public boolean clearClanMail(UUID to);
 
 	public boolean addClanMail(UUID sender, UUID from, UUID to, String text);
+	
+	public String parseText(UUID player, String text);
+	
+	public ConcurrentHashMap<UUID, List<MailData>> getMailData();
     
 }

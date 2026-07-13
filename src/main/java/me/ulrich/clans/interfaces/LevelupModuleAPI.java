@@ -7,10 +7,8 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.command.CommandSender;
 
-import me.ulrich.clans.data.BannerGroupData;
 import me.ulrich.clans.data.ClanData;
 import me.ulrich.clans.data.ClanEnum.ClanActions;
-import me.ulrich.clans.data.ClanEnum.RivalAllyCount;
 import me.ulrich.clans.data.ClanEnum.UnlockerTypes;
 import me.ulrich.clans.data.PatentData;
 import me.ulrich.clans.data.RequerimentData;
@@ -18,6 +16,8 @@ import me.ulrich.clans.data.RequerimentData_Return;
 
 public interface LevelupModuleAPI {
 
+	public String parseText(UUID player, String text);
+	
 	public void LoadRequeriments();
 
 	public boolean hasRequeriment(int level);
@@ -72,9 +72,6 @@ public interface LevelupModuleAPI {
 
 	public int getPointsNextLevel(ClanData clanData);
 
-	@Deprecated //OLD METHOD
-	public void checkClanLevelUp(ClanData clanData, CommandSender player);
-
 	public void check_actions(ClanActions action, UUID clanid);
 
 	public boolean addPoint(UUID clanid, int amount, CommandSender sender, StringBuilder reason);
@@ -84,12 +81,6 @@ public interface LevelupModuleAPI {
 	public boolean setPoint(UUID clanid, int amount, CommandSender sender, StringBuilder reason);
 
 	public int slotsCount(ClanData clan);
-
-	public int allyRivalCount(ClanData clan, RivalAllyCount type);
-
-	public int homeCount(ClanData clan);
-
-	public Optional<BannerGroupData> bannerCount(ClanData clan);
 
 	public boolean hasUnlocked(UUID clanUUID, UnlockerTypes type);
 
