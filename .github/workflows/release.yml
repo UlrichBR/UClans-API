@@ -45,9 +45,9 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
           # --- ADICIONE ESTAS LINHAS ABAIXO ---
-#MAVEN          server-id: central
-#MAVEN          server-username: MAVEN_USERNAME
-#MAVEN          server-password: MAVEN_PASSWORD
+          server-id: central
+          server-username: MAVEN_USERNAME
+          server-password: MAVEN_PASSWORD
 
       - name: Notificar Início (Discord)
         run: |
@@ -64,22 +64,22 @@ jobs:
                ${{ secrets.DISCORD_WEBHOOK }}
 
       # --- NOVA ETAPA: CONFIGURAÇÃO DO GPG PARA ASSINAR O ARTEFATO ---
-#MAVEN      - name: Configurar Chave GPG
-#MAVEN        uses: crazy-max/ghaction-import-gpg@v6
-#MAVEN        with:
-#MAVEN          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
-#MAVEN          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+      - name: Configurar Chave GPG
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
       # --- ETAPA ADAPTADA: COMPILA, EXECUTA O FLATTEN, ASSINA E ENVIA PARA O MAVEN CENTRAL ---
-#MAVEN      - name: Build e Deploy no Maven Central
-#MAVEN        env:
-#MAVEN          MAVEN_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-#MAVEN          MAVEN_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
-#MAVEN        run: |
-#MAVEN          mvn clean deploy \
-#MAVEN            -B \
-#MAVEN            --no-transfer-progress \
-#MAVEN            -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }}
+      - name: Build e Deploy no Maven Central
+        env:
+          MAVEN_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+        run: |
+          mvn clean deploy \
+            -B \
+            --no-transfer-progress \
+            -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }}
 
       - name: Localizar JAR e Processar Metadados
         run: |
