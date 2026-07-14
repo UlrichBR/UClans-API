@@ -71,15 +71,15 @@ jobs:
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
       # --- ETAPA ADAPTADA: COMPILA, EXECUTA O FLATTEN, ASSINA E ENVIA PARA O MAVEN CENTRAL ---
-      - name: Build e Deploy no Maven Central
-        env:
-          MAVEN_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-          MAVEN_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
-        run: |
-          mvn clean deploy \
-            -B \
-            --no-transfer-progress \
-            -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }}
+#      - name: Build e Deploy no Maven Central
+#        env:
+#          MAVEN_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+#          MAVEN_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+#        run: |
+#          mvn clean deploy \
+#            -B \
+#            --no-transfer-progress \
+#            -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }}
 
       - name: Localizar JAR e Processar Metadados
         run: |

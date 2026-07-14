@@ -108,6 +108,10 @@ public class IntegrationManager {
     public Optional<DiscordModuleAPI> getDiscordAPI() {
     	return Optional.empty();
     }
+    
+    public Optional<RewardsModuleAPI> getRewards() {
+        return Optional.empty();
+    }
 
 
 }
