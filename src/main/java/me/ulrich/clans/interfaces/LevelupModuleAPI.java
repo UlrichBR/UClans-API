@@ -9,7 +9,6 @@ import org.bukkit.command.CommandSender;
 
 import me.ulrich.clans.data.ClanData;
 import me.ulrich.clans.data.ClanEnum.ClanActions;
-import me.ulrich.clans.data.ClanEnum.UnlockerTypes;
 import me.ulrich.clans.data.PatentData;
 import me.ulrich.clans.data.RequerimentData;
 import me.ulrich.clans.data.RequerimentData_Return;
@@ -79,12 +78,6 @@ public interface LevelupModuleAPI {
 	public boolean removePoint(UUID clanid, int amount, CommandSender sender, StringBuilder reason);
 
 	public boolean setPoint(UUID clanid, int amount, CommandSender sender, StringBuilder reason);
-
-	public int slotsCount(ClanData clan);
-
-	public boolean hasUnlocked(UUID clanUUID, UnlockerTypes type);
-
-	public int getUnlocked(UnlockerTypes type);
 
 	public ConcurrentHashMap<String, PatentData> getPatentData();
 

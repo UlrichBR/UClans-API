@@ -2,12 +2,16 @@ package me.ulrich.clans.interfaces;
 
 import java.util.UUID;
 
+import me.ulrich.clans.data.ClanData;
 import me.ulrich.clans.data.ClanEnum.AllyInviteReturn;
+import me.ulrich.clans.data.ClanEnum.RivalAllyCount;
 import me.ulrich.clans.data.ClanEnum.RivalRemoveReturn;
 
 public interface RivalAllyModuleAPI {
 
 	public String parseText(UUID player, String text);
+	
+	public int allyRivalCount(ClanData clan, RivalAllyCount type);
 	
 	public AllyInviteReturn allySend(UUID senderid1, UUID receiverid2, boolean mult);
 	

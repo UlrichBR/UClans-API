@@ -22,7 +22,6 @@ import me.ulrich.clans.api.ModerationAPIManager;
 import me.ulrich.clans.api.MoneyAPIManager;
 import me.ulrich.clans.api.PlayerAPIManager;
 import me.ulrich.clans.api.RegionAPIManager;
-import me.ulrich.clans.api.RewardsAPIManager;
 import me.ulrich.clans.api.ScoreboardAPIManager;
 import me.ulrich.clans.api.SyncAPIManager;
 import me.ulrich.clans.data.Addon;
@@ -63,7 +62,6 @@ public final class Clans extends JavaPlugin implements UClans{
 	private final MapAPIManager mapAPI;
 	private final ScoreboardAPIManager scoreboardAPI;
 	private final GuiAPIManager guiAPI;
-	private RewardsAPIManager rewardsAPI;
 	private EntityAPIManager entityAPI;
 	private AnvilAPIManager anvilAPI;
 	private ColorAPIManager colorAPI;
@@ -90,7 +88,6 @@ public final class Clans extends JavaPlugin implements UClans{
 		this.mapAPI = null;
 		this.scoreboardAPI = null;
 		this.guiAPI = null;
-		this.rewardsAPI = null;
 		this.entityAPI = null;
 		this.anvilAPI = null;
 		this.colorAPI = null;
@@ -208,9 +205,6 @@ public final class Clans extends JavaPlugin implements UClans{
 		return null;
 	}
 
-	public RewardsAPIManager getRewardsAPI() {
-		return null;
-	}
 	
 	public EntityAPIManager getEntityAPI() {
 		return null;

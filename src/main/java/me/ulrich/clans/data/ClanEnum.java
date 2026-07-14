@@ -133,10 +133,6 @@ public class ClanEnum {
 		COMMON, BANNER, HEAD;
 	}
 	
-	public enum UnlockerTypes{
-		BANNER_UPLOAD, MEMBER_DEMOTE, MEMBER_PROMOTE, MEMBER_REGROUP, ACCEPT_WAR, INVITE_WAR, REMOVE_MEMBERS, INVITE_MEMBERS, MODTAG, CHANGE_DESC;
-	}
-	
 	public enum EnumExpand {
 		VERT, UP, DOWN;
 	}
