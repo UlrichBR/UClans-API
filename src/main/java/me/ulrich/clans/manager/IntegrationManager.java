@@ -1,6 +1,8 @@
 package me.ulrich.clans.manager;
 
 import java.util.Optional;
+import java.util.UUID;
+
 import me.ulrich.clans.Clans;
 import me.ulrich.clans.interfaces.BannerModuleAPI;
 import me.ulrich.clans.interfaces.DiscordModuleAPI;
@@ -79,6 +81,10 @@ public class IntegrationManager {
 
     public void unregisterHomeAPI(HomeModuleAPI api) {
 
+    }
+    
+    public String parseModulePlaceholders(UUID player, String identifier) {
+    	return null;
     }
 
     public Optional<RivalAllyModuleAPI> getRivalAlly() {
