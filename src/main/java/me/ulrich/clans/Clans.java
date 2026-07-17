@@ -23,7 +23,6 @@ import me.ulrich.clans.api.MoneyAPIManager;
 import me.ulrich.clans.api.PlayerAPIManager;
 import me.ulrich.clans.api.RegionAPIManager;
 import me.ulrich.clans.api.ScoreboardAPIManager;
-import me.ulrich.clans.api.SyncAPIManager;
 import me.ulrich.clans.data.Addon;
 import me.ulrich.clans.data.AddonInfo;
 import me.ulrich.clans.data.Extension;
@@ -39,7 +38,8 @@ public final class Clans extends JavaPlugin implements UClans{
 	private boolean entity = false;
 	private DataEnum databaseType = DataEnum.YAML;
 	private boolean title_alerts = true;
-	
+	private String serverName = "Clans";
+
 	//addon usage
 	private HashMap<Addon, AddonInfo> addonEnabledList = new HashMap<Addon, AddonInfo>();
 	private HashMap<Extension, Boolean> extensionEnabledList = new HashMap<Extension, Boolean>();
@@ -54,7 +54,6 @@ public final class Clans extends JavaPlugin implements UClans{
 	private final AddonAPIManager AddonAPI;
 	private final ModerationAPIManager modAPI;
 	private final CommandAPIManager commandAPI;
-	private final SyncAPIManager syncAPI;
 	private final RegionAPIManager regionAPI;
 	private final ClaimAPIManager claimAPI;
 	private final EventAPIManager eventAPI;
@@ -80,7 +79,6 @@ public final class Clans extends JavaPlugin implements UClans{
 		this.libAPI = null;
 		this.modAPI = null;
 		this.commandAPI = null;
-		this.syncAPI = null;
 		this.regionAPI = null;
 		this.claimAPI = null;
 		this.eventAPI = null;
@@ -168,9 +166,6 @@ public final class Clans extends JavaPlugin implements UClans{
 		return null;
 	}
 
-	public SyncAPIManager getSyncAPI() {
-		return null;
-	}
 	public RegionAPIManager getRegionAPI() {
 		return null;
 	}
@@ -254,6 +249,14 @@ public final class Clans extends JavaPlugin implements UClans{
 	
 	public String getResourceAgent() {
 		return null;
+	}
+
+	public String getServerName() {
+		return serverName;
+	}
+
+	public void setServerName(String serverName) {
+		this.serverName = serverName;
 	}
 
 

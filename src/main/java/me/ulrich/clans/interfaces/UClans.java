@@ -21,7 +21,6 @@ import me.ulrich.clans.api.MoneyAPIManager;
 import me.ulrich.clans.api.PlayerAPIManager;
 import me.ulrich.clans.api.RegionAPIManager;
 import me.ulrich.clans.api.ScoreboardAPIManager;
-import me.ulrich.clans.api.SyncAPIManager;
 
 public interface UClans {
 
@@ -42,9 +41,7 @@ public interface UClans {
 	ModerationAPIManager getModAPI();
 	
 	CommandAPIManager getCommandAPI();
-			
-	SyncAPIManager getSyncAPI();
-	
+				
 	MoneyAPIManager getMoneyAPI();
 
 	ClaimAPIManager getClaimAPI();

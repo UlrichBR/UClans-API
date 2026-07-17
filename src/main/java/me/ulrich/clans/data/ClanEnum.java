@@ -9,15 +9,25 @@ public class ClanEnum {
 	}
 	
 	public enum ClansModules {
-	    // Módulos específicos por versão (Anvil)
+	    // Módulos específicos por versão
 	    Anvil_26("Anvil_26", VersionUtil.VersionEnum.V261),
-	    Anvil_1_21("Anvil_1_21", VersionUtil.VersionEnum.V121), // Ou mapeie para V1211 se preferir
+	    Anvil_1_21("Anvil_1_21", VersionUtil.VersionEnum.V121),
 	    Anvil_1_20("Anvil_1_20", VersionUtil.VersionEnum.V120),
 	    Anvil_1_19("Anvil_1_19", VersionUtil.VersionEnum.V119),
 	    Anvil_1_18("Anvil_1_18", VersionUtil.VersionEnum.V118),
 	    
-	    // Módulos universais (sem versão atrelada)
-	    Chat("Chat", null);
+	    // Módulos universais
+	    Banner("Banner", null),
+	    Chat("Chat", null),
+	    Discord("Discord", null),
+	    Home("Home", null),
+	    Levelup("Levelup", null),
+		Logger("Logger", null),
+		Mail("Mail", null),
+		Rewards("Rewards", null),
+		Rivalally("Rivalally", null);
+		
+		
 
 	    private final String pluginName;
 	    private final VersionUtil.VersionEnum targetVersion;
@@ -39,14 +49,16 @@ public class ClanEnum {
 	     * Verifica se este módulo é compatível com a versão atual do servidor.
 	     */
 	    public boolean isCompatibleWithServer() {
-	        // Se não tem versão alvo (null), significa que é universal (Banner, Home, etc)
 	        if (this.targetVersion == null) {
 	            return true; 
 	        }
 	        
-	        // Se for um módulo de Anvil, verifica se a versão limpa do servidor bate com a do enum
 	        return VersionUtil.is(this.targetVersion);
 	    }
+	}
+	
+	public enum DebugType {
+		SENT, RECEIVED, DISPATCH;
 	}
 	
 	public enum ClansExtensions {
