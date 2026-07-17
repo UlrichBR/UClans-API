@@ -44,10 +44,10 @@ jobs:
           java-version: ${{ env.MIN_JAVA_VERSION }}
           distribution: 'temurin'
           cache: 'maven'
-          # --- DESATIVADO PARA USO FUTURO (SONATYPE) ---
-          # server-id: central
-          # server-username: MAVEN_USERNAME
-          # server-password: MAVEN_PASSWORD
+          # --- ADICIONE ESTAS LINHAS ABAIXO ---
+          server-id: central
+          server-username: MAVEN_USERNAME
+          server-password: MAVEN_PASSWORD
 
       - name: Notificar Início (Discord)
         run: |
@@ -63,23 +63,23 @@ jobs:
                }' \
                ${{ secrets.DISCORD_WEBHOOK }}
 
-      # --- DESATIVADO PARA USO FUTURO (ASSINATURA GPG) ---
-      # - name: Configurar Chave GPG
-      #   uses: crazy-max/ghaction-import-gpg@v6
-      #   with:
-      #     gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
-      #     passphrase: ${{ secrets.GPG_PASSPHRASE }}
+      # --- NOVA ETAPA: CONFIGURAÇÃO DO GPG PARA ASSINAR O ARTEFATO ---
+      - name: Configurar Chave GPG
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
-      # --- ETAPA ADAPTADA: COMPILA E GERA O JAR (SEM ENVIAR AO MAVEN) ---
-      - name: Build do Projeto (Local)
-        # env:
-        #   MAVEN_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-        #   MAVEN_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+      # --- ETAPA ADAPTADA: COMPILA, EXECUTA O FLATTEN, ASSINA E ENVIA PARA O MAVEN CENTRAL ---
+      - name: Build e Deploy no Maven Central
+        env:
+          MAVEN_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
         run: |
-          # Alterado de "deploy" para "install" e removida a flag do GPG
-          mvn clean install \
+          mvn clean deploy \
             -B \
-            --no-transfer-progress
+            --no-transfer-progress \
+            -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }}
 
       - name: Localizar JAR e Processar Metadados
         run: |
@@ -97,7 +97,7 @@ jobs:
                  "username": "TribeCraft Build",
                  "avatar_url": "${{ env.DISCORD_EMBED_THUMBNAIL }}",
                  "embeds": [{
-                   "description": "📦 **API Compilada com Sucesso: ${{ env.MAVEN_NAME }}**\n`${{ env.JAR_NAME }}`\nEnviando agora para o R2 e Git...",
+                   "description": "📦 **API Compilada e Enviada ao Maven Central: ${{ env.MAVEN_NAME }}**\n`${{ env.JAR_NAME }}`\nEnviando agora para o R2 e Git...",
                    "color": 3447003
                  }]
                }' \
@@ -167,7 +167,7 @@ jobs:
         if: success()
         run: |
           curl -s -X POST -H "Content-Type: application/json" \
-               -d '{"content": "🔌 API - **${{ env.MAVEN_NAME }}** `${{ env.MAVEN_VERSION }}` enviada ao R2/AWS/GIT!"}' \
+               -d '{"content": "🔌 API - **${{ env.MAVEN_NAME }}** `${{ env.MAVEN_VERSION }}` enviada ao Maven Central/R2/AWS/GIT!"}' \
                ${{ secrets.DISCORD_WEBHOOK }}
 
       - name: Postar Notificação de Release (Elegante)
