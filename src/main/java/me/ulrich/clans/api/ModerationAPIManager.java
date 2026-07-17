@@ -63,4 +63,20 @@ public class ModerationAPIManager implements ModAPI {
 		return null;
 	}
 
+	@Override
+	public void saveModerationData(UUID clanUUID, HashMap<String, HashMap<String, Boolean>> perm) {		
+	}
+
+	@Override
+	public void deleteModerationData(UUID clanId) {		
+	}
+
+	@Override
+	public void loadModerationData(UUID clanId) {		
+	}
+
+	@Override
+	public void loadAllModerationData(boolean async) {		
+	}
+
 }

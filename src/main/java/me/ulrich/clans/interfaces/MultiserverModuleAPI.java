@@ -1,41 +1,34 @@
 package me.ulrich.clans.interfaces;
 
-import java.util.Optional;
 import java.util.UUID;
 
+import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
-import me.ulrich.clans.data.OnlineData;
 import me.ulrich.clans.data.ClanEnum.DebugType;
-import me.ulrich.clans.data.ClanEnum.RedisType;
 
 public interface MultiserverModuleAPI {
 
 	boolean syncEnabled();
 
-	@Deprecated
-	void newSync(RedisType type, String string);
+	void sendSync(String type, String content);
 	
-	void sendSync(RedisType type, String content);
-	
-	void sendSync(RedisType type, UUID uuid);
+	void sendSync(String type, UUID uuid);
 
 	void serverConnector(Player player, String server);
 
 	void debugMessage(DebugType type, String message);
 
-	void clearOnlineData();
+	void addPendingLocation(UUID player, String world, double x, double y, double z, float yaw, float pitch);
 	
-	Optional<OnlineData> getOnlineData(UUID playerUUID);
+	void teleportOrQueue(UUID uuid, Location loc);
 	
-	Optional<OnlineData> getOnlineData(String playerNickname);
+	void runPendingTeleport(Player player);
 	
-	boolean addOnlineData(UUID playerUUID, String nickname, String server);
+	String getOutGoindChannel();
 	
-	boolean removeOnlineData(UUID playerUUID);
+	String getInComingChannel();
 	
-	void solveProxiedPlayers(String jsonArray);
-
 	String getServerName();
 
 }

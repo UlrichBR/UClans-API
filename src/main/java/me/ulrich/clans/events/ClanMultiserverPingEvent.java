@@ -1,26 +1,27 @@
 package me.ulrich.clans.events;
 
+import java.util.Optional;
 import java.util.UUID;
 
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-import me.ulrich.clans.data.ClanEnum.RedisType;
-
 public class ClanMultiserverPingEvent extends Event implements Cancellable {
 
 	private static final HandlerList handlers = new HandlerList();
     private boolean cancelled;
-	private RedisType type;
+	private String type;
 	private UUID uuid;
+	private Optional<Object> out;
 
 	
 
-    public ClanMultiserverPingEvent(RedisType type, UUID uuid) {
+    public ClanMultiserverPingEvent(String type, UUID uuid, Optional<Object> out) {
 
     this.setType(type);
     this.setUuid(uuid);
+    this.setOut(out);
 
     }
     
@@ -40,11 +41,11 @@ public class ClanMultiserverPingEvent extends Event implements Cancellable {
         return handlers;
     }
 
-	public RedisType getType() {
+	public String getType() {
 		return type;
 	}
 
-	public void setType(RedisType type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 
@@ -54,6 +55,14 @@ public class ClanMultiserverPingEvent extends Event implements Cancellable {
 
 	public void setUuid(UUID uuid) {
 		this.uuid = uuid;
+	}
+
+	public Optional<Object> getOut() {
+		return out;
+	}
+
+	public void setOut(Optional<Object> out) {
+		this.out = out;
 	}
 
 

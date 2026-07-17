@@ -19,6 +19,7 @@ import me.ulrich.clans.api.MapAPIManager;
 import me.ulrich.clans.api.ModerationAPIManager;
 import me.ulrich.clans.api.MoneyAPIManager;
 import me.ulrich.clans.api.PlayerAPIManager;
+import me.ulrich.clans.api.PlayerInviteAPIManager;
 import me.ulrich.clans.api.RegionAPIManager;
 import me.ulrich.clans.api.ScoreboardAPIManager;
 
@@ -63,6 +64,8 @@ public interface UClans {
 	GuiAPIManager getGuiAPI();
 
 	ColorAPIManager getColorAPI();
+	
+	PlayerInviteAPIManager getInviteAPI();
 	
 	void startTasks();
 	void registerEvents();

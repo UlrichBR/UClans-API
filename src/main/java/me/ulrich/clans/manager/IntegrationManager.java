@@ -20,10 +20,12 @@ public class IntegrationManager {
         
     }
     
-    public void registerRewardsAPI(MultiserverModuleAPI api) {
+
+    
+    public void registerMultiserverAPI(MultiserverModuleAPI api) {
     }
     
-    public void unregisterRewardsAPI(MultiserverModuleAPI api) {
+    public void unregisterMultiserverAPI(MultiserverModuleAPI api) {
 
         
     }
@@ -35,6 +37,7 @@ public class IntegrationManager {
     public void unregisterRewardsAPI(RewardsModuleAPI api) {
         
     }
+    
     
     public void registerDiscordAPI(DiscordModuleAPI api) {
        

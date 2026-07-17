@@ -7,6 +7,14 @@ import java.util.UUID;
 import me.ulrich.clans.data.ModerationData;
 
 public interface ModAPI {
+	
+	void saveModerationData(UUID clanUUID, HashMap<String, HashMap<String, Boolean>> perm);
+	
+	void deleteModerationData(UUID clanId);
+
+	void loadModerationData(UUID clanId);
+
+	void loadAllModerationData(boolean async);
 
 	Optional<ModerationData> getLeaderRole();
 	
