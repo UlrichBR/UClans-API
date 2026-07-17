@@ -9,6 +9,7 @@ import org.bukkit.entity.Player;
 
 import me.ulrich.clans.data.ClanData;
 import me.ulrich.clans.data.ModerationData;
+import me.ulrich.clans.data.OnlineData;
 import me.ulrich.clans.data.PlayerData;
 import me.ulrich.clans.data.ClanEnum.PlayerSettingsType;
 import me.ulrich.clans.data.ClanEnum.SettingsFlagsAccept;
@@ -111,5 +112,16 @@ public interface PlayerAPI {
 	boolean canGeneralPvp(UUID attackerUUID, UUID victimUUID);
 
 	boolean canGeneralPvp(Player attacker, Player victim);
+	
+	void clearOnlineData();
+	
+	Optional<OnlineData> getOnlineData(UUID playerUUID);
+	
+	Optional<OnlineData> getOnlineData(String playerNickname);
 
+	boolean addOnlineData(UUID playerUUID, String nickname, String server);
+	
+	boolean removeOnlineData(UUID playerUUID);
+	
+	void solveProxiedPlayers(String jsonArray);
 }

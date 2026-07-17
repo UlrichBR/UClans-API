@@ -10,12 +10,21 @@ import me.ulrich.clans.interfaces.HomeModuleAPI;
 import me.ulrich.clans.interfaces.LevelupModuleAPI;
 import me.ulrich.clans.interfaces.LoggerModuleAPI;
 import me.ulrich.clans.interfaces.MailModuleAPI;
+import me.ulrich.clans.interfaces.MultiserverModuleAPI;
 import me.ulrich.clans.interfaces.RewardsModuleAPI;
 import me.ulrich.clans.interfaces.RivalAllyModuleAPI;
 
 public class IntegrationManager {
 
     public IntegrationManager(Clans plugin) {
+        
+    }
+    
+    public void registerRewardsAPI(MultiserverModuleAPI api) {
+    }
+    
+    public void unregisterRewardsAPI(MultiserverModuleAPI api) {
+
         
     }
     
@@ -119,5 +128,9 @@ public class IntegrationManager {
         return Optional.empty();
     }
 
+    public Optional<MultiserverModuleAPI> getMultiserverAPI() {
+        return Optional.empty();
+    }
+    
 
 }

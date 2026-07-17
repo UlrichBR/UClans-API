@@ -12,6 +12,7 @@ import me.ulrich.clans.data.ClanData;
 import me.ulrich.clans.data.ClanEnum.PlayerSettingsType;
 import me.ulrich.clans.data.ClanEnum.SettingsFlagsAccept;
 import me.ulrich.clans.data.ModerationData;
+import me.ulrich.clans.data.OnlineData;
 import me.ulrich.clans.data.PlayerData;
 import me.ulrich.clans.interfaces.PlayerAPI;
 
@@ -308,6 +309,42 @@ public class PlayerAPIManager implements PlayerAPI {
 	@Override
 	public boolean canGeneralPvp(Player attacker, Player victim) {
 		return false;
+	}
+
+
+	@Override
+	public void clearOnlineData() {
+		
+	}
+
+
+	@Override
+	public Optional<OnlineData> getOnlineData(UUID playerUUID) {
+		return Optional.empty();
+	}
+
+
+	@Override
+	public Optional<OnlineData> getOnlineData(String playerNickname) {
+		return Optional.empty();
+	}
+
+
+	@Override
+	public boolean addOnlineData(UUID playerUUID, String nickname, String server) {
+		return false;
+	}
+
+
+	@Override
+	public boolean removeOnlineData(UUID playerUUID) {
+		return false;
+	}
+
+
+	@Override
+	public void solveProxiedPlayers(String jsonArray) {
+		
 	}
 
 	
