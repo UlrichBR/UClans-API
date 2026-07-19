@@ -7,7 +7,7 @@ import org.bukkit.inventory.ItemStack;
 
 import me.ulrich.clans.data.AnvilSession;
 
-public interface AnvilImplement {
+public interface AnvilModuleAPI {
 
     boolean supports();
 

@@ -4,6 +4,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 import me.ulrich.clans.Clans;
+import me.ulrich.clans.interfaces.AnvilModuleAPI;
 import me.ulrich.clans.interfaces.BannerModuleAPI;
 import me.ulrich.clans.interfaces.DiscordModuleAPI;
 import me.ulrich.clans.interfaces.HomeModuleAPI;
@@ -20,14 +21,20 @@ public class IntegrationManager {
         
     }
     
+    public void registerAnvilAPI(AnvilModuleAPI api) {
 
+    }
+    
+    public void unregisterAnvilAPI(AnvilModuleAPI api) {
+        
+    }
     
     public void registerMultiserverAPI(MultiserverModuleAPI api) {
+    	
     }
     
     public void unregisterMultiserverAPI(MultiserverModuleAPI api) {
 
-        
     }
     
     public void registerRewardsAPI(RewardsModuleAPI api) {
@@ -37,7 +44,6 @@ public class IntegrationManager {
     public void unregisterRewardsAPI(RewardsModuleAPI api) {
         
     }
-    
     
     public void registerDiscordAPI(DiscordModuleAPI api) {
        
@@ -135,5 +141,8 @@ public class IntegrationManager {
         return Optional.empty();
     }
     
+	public Optional<AnvilModuleAPI> getAnvilAPI() {
+		return Optional.empty();
+	}
 
 }

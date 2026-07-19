@@ -5,7 +5,6 @@ import java.util.HashMap;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import me.ulrich.clans.api.AddonAPIManager;
-import me.ulrich.clans.api.AnvilAPIManager;
 import me.ulrich.clans.api.BossBarAPIManager;
 import me.ulrich.clans.api.ClaimAPIManager;
 import me.ulrich.clans.api.ClanAPIManager;
@@ -63,7 +62,6 @@ public final class Clans extends JavaPlugin implements UClans{
 	private final ScoreboardAPIManager scoreboardAPI;
 	private final GuiAPIManager guiAPI;
 	private EntityAPIManager entityAPI;
-	private AnvilAPIManager anvilAPI;
 	private ColorAPIManager colorAPI;
 	private PlayerInviteAPIManager inviteAPI;
 	private IntegrationManager integrationManager;
@@ -89,7 +87,6 @@ public final class Clans extends JavaPlugin implements UClans{
 		this.scoreboardAPI = null;
 		this.guiAPI = null;
 		this.entityAPI = null;
-		this.anvilAPI = null;
 		this.colorAPI = null;
 		this.inviteAPI = null;
 
@@ -228,10 +225,6 @@ public final class Clans extends JavaPlugin implements UClans{
 		return title_alerts;
 	}
 
-	@Override
-	public AnvilAPIManager getAnvilAPI() {
-		return null;
-	}
 
 	public ColorAPIManager getColorAPI() {
 		return null;
