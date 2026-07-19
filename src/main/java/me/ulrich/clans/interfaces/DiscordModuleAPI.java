@@ -17,6 +17,6 @@ public interface DiscordModuleAPI {
 	
 	boolean isConnectedClan(UUID clanID);
 	
-	public String parseText(UUID player, String identifier);
+	String parseText(UUID player, String identifier);
 	
 }
