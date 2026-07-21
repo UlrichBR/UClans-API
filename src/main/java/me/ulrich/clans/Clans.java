@@ -6,23 +6,16 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import me.ulrich.clans.api.AddonAPIManager;
 import me.ulrich.clans.api.BossBarAPIManager;
-import me.ulrich.clans.api.ClaimAPIManager;
 import me.ulrich.clans.api.ClanAPIManager;
 import me.ulrich.clans.api.ColorAPIManager;
 import me.ulrich.clans.api.CommandAPIManager;
 import me.ulrich.clans.api.EntityAPIManager;
-import me.ulrich.clans.api.EventAPIManager;
 import me.ulrich.clans.api.GuiAPIManager;
-import me.ulrich.clans.api.HologramAPIManager;
 import me.ulrich.clans.api.HooksAPIManager;
 import me.ulrich.clans.api.LibAPIManager;
-import me.ulrich.clans.api.MapAPIManager;
 import me.ulrich.clans.api.ModerationAPIManager;
-import me.ulrich.clans.api.MoneyAPIManager;
 import me.ulrich.clans.api.PlayerAPIManager;
 import me.ulrich.clans.api.PlayerInviteAPIManager;
-import me.ulrich.clans.api.RegionAPIManager;
-import me.ulrich.clans.api.ScoreboardAPIManager;
 import me.ulrich.clans.data.Addon;
 import me.ulrich.clans.data.AddonInfo;
 import me.ulrich.clans.data.Extension;
@@ -47,19 +40,12 @@ public final class Clans extends JavaPlugin implements UClans{
 
 	private final ClanAPIManager ClanAPI;
 	private final PlayerAPIManager PlayerAPI;
-	private final MoneyAPIManager MoneyAPI;
 	private final HooksAPIManager HooksAPI;
 	private final BossBarAPIManager BossBarAPI;
 	private final LibAPIManager libAPI;
 	private final AddonAPIManager AddonAPI;
 	private final ModerationAPIManager modAPI;
 	private final CommandAPIManager commandAPI;
-	private final RegionAPIManager regionAPI;
-	private final ClaimAPIManager claimAPI;
-	private final EventAPIManager eventAPI;
-	private final HologramAPIManager hologramAPI;
-	private final MapAPIManager mapAPI;
-	private final ScoreboardAPIManager scoreboardAPI;
 	private final GuiAPIManager guiAPI;
 	private EntityAPIManager entityAPI;
 	private ColorAPIManager colorAPI;
@@ -72,19 +58,12 @@ public final class Clans extends JavaPlugin implements UClans{
 		
 		this.ClanAPI = null;
 		this.PlayerAPI = null;
-		this.MoneyAPI = null;
 		this.HooksAPI = null;
 		this.BossBarAPI = null;
 		this.AddonAPI = null;
 		this.libAPI = null;
 		this.modAPI = null;
 		this.commandAPI = null;
-		this.regionAPI = null;
-		this.claimAPI = null;
-		this.eventAPI = null;
-		this.hologramAPI = null;
-		this.mapAPI = null;
-		this.scoreboardAPI = null;
 		this.guiAPI = null;
 		this.entityAPI = null;
 		this.colorAPI = null;
@@ -109,11 +88,6 @@ public final class Clans extends JavaPlugin implements UClans{
 
 	@Override
 	public LibAPIManager getLibAPI() {
-		return null;
-	}
-	
-	@Override
-	public MoneyAPIManager getMoneyAPI() {
 		return null;
 	}
 
@@ -166,36 +140,12 @@ public final class Clans extends JavaPlugin implements UClans{
 		return null;
 	}
 
-	public RegionAPIManager getRegionAPI() {
-		return null;
-	}
-	
-	public ClaimAPIManager getClaimAPI() {
-		return null;
-	}
-	
-	public EventAPIManager getEventAPI() {
-		return null;
-	}
 
-	@Override
-	public HologramAPIManager getHologramAPI() {
-		return null;
-	}
-	
-	@Override
-	public MapAPIManager getMapAPI() {
-		return null;
-	}
 
 	@Override
 	public void loadExtensions() {		
 	}
-	
-	public ScoreboardAPIManager getScoreboardAPI() {
-		return null;
-	}
-	
+
 	public GuiAPIManager getGuiAPI() {
 		return null;
 	}

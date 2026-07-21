@@ -127,4 +127,3 @@ public abstract class Module {
 		this.require = require;
 	}
 }
-

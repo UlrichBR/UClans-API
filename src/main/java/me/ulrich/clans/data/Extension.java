@@ -123,4 +123,3 @@ public abstract class Extension {
 		this.require = require;
 	}
 }
-

@@ -41,4 +41,15 @@ public interface RegionImplement {
 	Optional<String> getPluginVersion();
 
 	Optional<String> getPluginName();
+
+	boolean playerHasRegionList(Player player, List<String> stringList);
+	/* playerHasRegionList(Player player, List<String>regions)...
+Iterator<String> regionsIterator = regions.iterator();
+				while(regionsIterator.hasNext()) {
+					
+					String region = regionsIterator.next();
+					return api.get().isInRegion(player, region);
+				}
+	 * */
+
 }

@@ -4,23 +4,16 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import me.ulrich.clans.api.AddonAPIManager;
 import me.ulrich.clans.api.BossBarAPIManager;
-import me.ulrich.clans.api.ClaimAPIManager;
 import me.ulrich.clans.api.ClanAPIManager;
 import me.ulrich.clans.api.ColorAPIManager;
 import me.ulrich.clans.api.CommandAPIManager;
 import me.ulrich.clans.api.EntityAPIManager;
-import me.ulrich.clans.api.EventAPIManager;
 import me.ulrich.clans.api.GuiAPIManager;
-import me.ulrich.clans.api.HologramAPIManager;
 import me.ulrich.clans.api.HooksAPIManager;
 import me.ulrich.clans.api.LibAPIManager;
-import me.ulrich.clans.api.MapAPIManager;
 import me.ulrich.clans.api.ModerationAPIManager;
-import me.ulrich.clans.api.MoneyAPIManager;
 import me.ulrich.clans.api.PlayerAPIManager;
 import me.ulrich.clans.api.PlayerInviteAPIManager;
-import me.ulrich.clans.api.RegionAPIManager;
-import me.ulrich.clans.api.ScoreboardAPIManager;
 
 public interface UClans {
 
@@ -41,21 +34,7 @@ public interface UClans {
 	ModerationAPIManager getModAPI();
 	
 	CommandAPIManager getCommandAPI();
-				
-	MoneyAPIManager getMoneyAPI();
-
-	ClaimAPIManager getClaimAPI();
-	
-	EventAPIManager getEventAPI();
-	
-	RegionAPIManager getRegionAPI();
-
-	HologramAPIManager getHologramAPI();
-	
-	MapAPIManager getMapAPI();
-	
-	ScoreboardAPIManager getScoreboardAPI();
-	
+									
 	EntityAPIManager getEntityAPI();
 		
 	GuiAPIManager getGuiAPI();
@@ -63,6 +42,8 @@ public interface UClans {
 	ColorAPIManager getColorAPI();
 	
 	PlayerInviteAPIManager getInviteAPI();
+	
+	
 	
 	void startTasks();
 	void registerEvents();
