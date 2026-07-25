@@ -1,19 +1,12 @@
 package me.ulrich.clans.interfaces;
 
 import java.util.Optional;
+import java.util.UUID;
 
 import org.bukkit.entity.Player;
 
 public interface MoneyImplement {
-	
-	@Deprecated
-	boolean hasMoney(Player player, int amount);
-	@Deprecated
-	boolean addMoney(Player player, int amount);
-	@Deprecated
-	boolean withdrawMoney(Player player, int amount);
-	@Deprecated
-	int getMoney(Player player);
+
 	
 	boolean hasMoney(Player player, double amount);
 
@@ -23,8 +16,20 @@ public interface MoneyImplement {
 
 	double getMoney(Player player, boolean inDouble);
 	
-	boolean isInternal();
+	double clanBalance(UUID clanUUID);
 	
+	boolean hasClanBank(UUID clanUUID, Double value);
+	
+	boolean addClanBank(UUID clanUUID, Double value, Player sender);
+	
+	boolean withdrawClanBank(UUID clanUUID, Double value, Player sender);
+	
+	boolean setClanBank(UUID clanUUID, Double balance, Player sender);
+	
+	Double clanBankLimit(UUID clanUUID);
+	
+	String clanBalanceFormated(UUID clanUUID);
+		
 	Optional<String> getPluginVersion();
 	
 	Optional<String> getPluginName();
