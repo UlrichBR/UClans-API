@@ -12,10 +12,19 @@ import com.github.Anon8281.universalScheduler.scheduling.tasks.MyScheduledTask;
 
 import me.ulrich.clans.data.ClanEnum.TranslatableKey;
 import me.ulrich.clans.tasks.AsyncTaskExecutor;
+import net.kyori.adventure.bossbar.BossBar;
 import net.kyori.adventure.platform.bukkit.BukkitAudiences;
 
 public interface LibAPI {
 
+	String getDefaultBanner();
+
+	void setDefaultBanner(String defaultBanner);
+	
+	void customBossBar(Player player, BossBar.Color barcolor, BossBar.Overlay barstyle, List<BossBar.Flag> flags, String message, int seconds, boolean animated, List<String> data);
+
+	void removeAllBar(UUID uuid);
+	
 	void resetTitle(Player p);
 	
 	void sendTitle(Player p, String msg, int fadeIn, int stay, int fadeOut);

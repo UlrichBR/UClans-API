@@ -21,6 +21,8 @@ import me.ulrich.clans.data.addons.WarKitData;
 
 public interface WarAddonAPI {
 
+	String parseText(UUID player, String text);
+	
 	boolean hasClanInviter(UUID clanUUID);
 	
 	WarInvite getClanInvite(UUID clanid);
@@ -28,8 +30,6 @@ public interface WarAddonAPI {
 	boolean removeWarInvite(UUID clanid);
 
 	WarReturn warSend(UUID senderid1, UUID receiverid2, String arena, int max, Player player2, WarKitData kit);
-
-	String parseText(UUID player, String text);
 
 	HashMap<ClanData, WarInvite> getWarinvites();
 	

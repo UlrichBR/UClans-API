@@ -11,6 +11,8 @@ import me.ulrich.clans.data.ClanEnum.BuyChestResponse;
 
 public interface ChestAddonAPI {
 
+	String parseText(UUID player, String text);
+	
 	Optional<String> consultInUse_REAL(UUID clanId);
 
 	BuyChestResponse buyExtra(Player player, UUID clanid);

@@ -19,6 +19,8 @@ import me.ulrich.clans.data.addons.LeagueSeasonData;
 
 public interface LeagueAddonAPI {
 
+	String parseText(UUID player, String text);
+	
 	void SaveLeagueData(LeagueData log, boolean async);
 
 	void DeleteLeagueData(UUID logID, boolean async);
@@ -54,8 +56,6 @@ public interface LeagueAddonAPI {
 	boolean addClanLeague(UUID clanUUID, double points, String plugin, LeagueEventAction action);
 
 	boolean compareEvent(LeagueTime time, long eventdate);
-
-	String parseText(UUID player, String identifier);
 
 	ConcurrentHashMap<UUID, List<LeagueData>> getLeagueData();
 

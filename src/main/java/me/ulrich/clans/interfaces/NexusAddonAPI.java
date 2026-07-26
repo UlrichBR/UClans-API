@@ -19,6 +19,8 @@ import me.ulrich.clans.data.addons.NexusTerrainData;
 
 public interface NexusAddonAPI {
 
+	String parseText(UUID player, String text);
+	
 	void SaveNexus(NexusLandData land);
 
 	void DeleteNexus(UUID landUUID);
@@ -118,8 +120,6 @@ public interface NexusAddonAPI {
 	int clanLandLimit(UUID clanUUID);
 
 	void teleportDelay(Player player, Location new_location, boolean checkcooldown);
-
-	String parseText(UUID player, String text);
 
 	boolean verify(Player attacker, Location location, NexusVerifyEvent verifyEvent);
 

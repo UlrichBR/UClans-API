@@ -14,6 +14,9 @@ import me.ulrich.clans.Clans;
 import me.ulrich.clans.data.ClanEnum.TranslatableKey;
 import me.ulrich.clans.interfaces.LibAPI;
 import me.ulrich.clans.tasks.AsyncTaskExecutor;
+import net.kyori.adventure.bossbar.BossBar.Color;
+import net.kyori.adventure.bossbar.BossBar.Flag;
+import net.kyori.adventure.bossbar.BossBar.Overlay;
 import net.kyori.adventure.platform.bukkit.BukkitAudiences;
 
 public class LibAPIManager implements LibAPI {
@@ -169,6 +172,27 @@ public class LibAPIManager implements LibAPI {
 	@Override
 	public AsyncTaskExecutor getAsyncTaskExecutor() {
 		return null;
+	}
+
+	@Override
+	public String getDefaultBanner() {
+		return null;
+	}
+
+	@Override
+	public void setDefaultBanner(String defaultBanner) {
+		
+	}
+
+	@Override
+	public void customBossBar(Player player, Color barcolor, Overlay barstyle, List<Flag> flags, String message,
+			int seconds, boolean animated, List<String> data) {
+		
+	}
+
+	@Override
+	public void removeAllBar(UUID uuid) {
+		
 	}
 
 }

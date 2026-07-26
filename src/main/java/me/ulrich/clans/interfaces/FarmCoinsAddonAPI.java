@@ -15,6 +15,8 @@ import me.ulrich.clans.data.addons.FarmCoinData;
 
 public interface FarmCoinsAddonAPI {
 
+	String parseText(UUID player, String text);
+	
 	boolean isPlaced(Player player, Location e);
 	
 	void loadCoinList();

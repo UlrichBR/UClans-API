@@ -3,6 +3,7 @@ package me.ulrich.clans.interfaces;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 import java.util.function.Predicate;
 
 import org.bukkit.Location;
@@ -19,6 +20,8 @@ import me.ulrich.clans.data.addons.LeaderboardData;
 
 public interface LeaderboardAddonAPI {
 
+	String parseText(UUID player, String text);
+	
 	void saveBoardData(LeaderboardData clan);
 
 	void deleteBoardData(String clanId);

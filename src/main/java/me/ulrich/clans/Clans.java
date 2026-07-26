@@ -4,8 +4,7 @@ import java.util.HashMap;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import me.ulrich.clans.api.AddonAPIManager;
-import me.ulrich.clans.api.BossBarAPIManager;
+import me.ulrich.clans.api.IntegrationAPIManager;
 import me.ulrich.clans.api.ClanAPIManager;
 import me.ulrich.clans.api.ColorAPIManager;
 import me.ulrich.clans.api.CommandAPIManager;
@@ -27,6 +26,7 @@ import me.ulrich.clans.manager.IntegrationManager;
 public final class Clans extends JavaPlugin implements UClans{
 
 	private String buildVersion = "V9";
+	private String language = "EN";
 	private String memberVersion = "NONE";
 	private boolean entity = false;
 	private DataEnum databaseType = DataEnum.YAML;
@@ -41,9 +41,8 @@ public final class Clans extends JavaPlugin implements UClans{
 	private final ClanAPIManager ClanAPI;
 	private final PlayerAPIManager PlayerAPI;
 	private final HooksAPIManager HooksAPI;
-	private final BossBarAPIManager BossBarAPI;
 	private final LibAPIManager libAPI;
-	private final AddonAPIManager AddonAPI;
+	private final IntegrationAPIManager AddonAPI;
 	private final ModerationAPIManager modAPI;
 	private final CommandAPIManager commandAPI;
 	private final GuiAPIManager guiAPI;
@@ -59,7 +58,6 @@ public final class Clans extends JavaPlugin implements UClans{
 		this.ClanAPI = null;
 		this.PlayerAPI = null;
 		this.HooksAPI = null;
-		this.BossBarAPI = null;
 		this.AddonAPI = null;
 		this.libAPI = null;
 		this.modAPI = null;
@@ -95,14 +93,9 @@ public final class Clans extends JavaPlugin implements UClans{
 	public HooksAPIManager getHooksAPI() {
 		return null;
 	}
-
-	@Override
-	public BossBarAPIManager getBossBarAPI() {
-		return null;
-	}
 	
 	@Override
-	public AddonAPIManager getAddonAPI() {
+	public IntegrationAPIManager getIntegrationAPI() {
 		return null;
 	}
 	
@@ -185,10 +178,6 @@ public final class Clans extends JavaPlugin implements UClans{
 		
 	}
 	
-	public IntegrationManager getIntegrationManager() {
-		return null;
-	}
-	
 	public String getResourceUid() {
 		return null;
 	}
@@ -207,6 +196,10 @@ public final class Clans extends JavaPlugin implements UClans{
 	
 	public PlayerInviteAPIManager getInviteAPI() {
 		return inviteAPI;
+	}
+
+	public String getLanguage() {
+		return language;
 	}
 
 

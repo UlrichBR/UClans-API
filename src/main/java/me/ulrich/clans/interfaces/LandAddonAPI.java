@@ -25,6 +25,8 @@ import me.ulrich.clans.manager.utils.Cuboid;
 
 public interface LandAddonAPI {
 
+	String parseText(UUID player, String text);
+	
 	ItemStack getBanner(UUID playerUUID);
 
 	boolean landExists(UUID landUUID);
@@ -110,8 +112,6 @@ public interface LandAddonAPI {
 	boolean setNameLand(LandsData land, String name);
 
 	void teleportDelay(Player player, Location new_location, boolean checkcooldown);
-
-	String parseText(UUID landUUID, String text);
 
 	int clanLandLimit(ClanData clan);
 

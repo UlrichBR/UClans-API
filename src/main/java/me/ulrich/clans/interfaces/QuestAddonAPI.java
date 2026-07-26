@@ -17,6 +17,8 @@ import me.ulrich.clans.data.addons.QuestData;
 
 public interface QuestAddonAPI {
 	
+	String parseText(UUID player, String text);
+	
 	void saveAllQueue();
 
 	Optional<UUID> getPlayerMode(UUID playerUUID);
@@ -66,8 +68,6 @@ public interface QuestAddonAPI {
 	boolean checkWhitelistItem(String whitelist, QuestType type);
 
 	void sendWarning(QuestWarn warn, List<Player> players, QuestData questData, int amount);
-
-	String parseText(UUID playerUUID, String text);
 
 	HashMap<Player, Location> getLocFly();
 

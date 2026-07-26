@@ -121,6 +121,10 @@ public class IntegrationManager {
     public String parseModulePlaceholders(UUID player, String identifier) {
     	return null;
     }
+    
+    public String parseAddonPlaceholders(UUID player, String identifier) {
+    	return null;
+    }
 
     public Optional<RivalAllyModuleAPI> getRivalAlly() {
         return Optional.empty();
