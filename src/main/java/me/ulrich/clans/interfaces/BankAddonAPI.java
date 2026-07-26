@@ -6,6 +6,8 @@ import org.bukkit.entity.Player;
 
 public interface BankAddonAPI {
 
+	String parseText(UUID player, String text);
+	
 	boolean hasMoney(Player player, double value);
 	
 	boolean withdrawMoney(Player player, double value);
