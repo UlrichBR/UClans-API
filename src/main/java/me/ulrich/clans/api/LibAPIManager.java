@@ -6,11 +6,19 @@ import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemFlag;
+import org.bukkit.inventory.ItemStack;
 
 import com.github.Anon8281.universalScheduler.scheduling.schedulers.TaskScheduler;
 import com.github.Anon8281.universalScheduler.scheduling.tasks.MyScheduledTask;
 
+import dev.triumphteam.gui.builder.item.ItemBuilder;
+import dev.triumphteam.gui.guis.Gui;
+import dev.triumphteam.gui.guis.GuiItem;
+import dev.triumphteam.gui.guis.PaginatedGui;
+import dev.triumphteam.gui.guis.StorageGui;
 import me.ulrich.clans.Clans;
+import me.ulrich.clans.data.AddonGuiItemsData;
 import me.ulrich.clans.data.ClanEnum.TranslatableKey;
 import me.ulrich.clans.interfaces.LibAPI;
 import me.ulrich.clans.tasks.AsyncTaskExecutor;
@@ -18,6 +26,7 @@ import net.kyori.adventure.bossbar.BossBar.Color;
 import net.kyori.adventure.bossbar.BossBar.Flag;
 import net.kyori.adventure.bossbar.BossBar.Overlay;
 import net.kyori.adventure.platform.bukkit.BukkitAudiences;
+import net.megavex.scoreboardlibrary.api.sidebar.Sidebar;
 
 public class LibAPIManager implements LibAPI {
 
@@ -193,6 +202,69 @@ public class LibAPIManager implements LibAPI {
 	@Override
 	public void removeAllBar(UUID uuid) {
 		
+	}
+
+	@Override
+	public boolean showScoreboard(Player player, String title, List<String> lines) {
+		return false;
+	}
+
+	@Override
+	public void hideScoreboard(Player player) {
+		
+	}
+
+	@Override
+	public ConcurrentHashMap<UUID, Sidebar> getBoards() {
+		return null;
+	}
+
+	@Override
+	public void filler(PaginatedGui gui, AddonGuiItemsData item, GuiItem asGuiItem_item) {
+		
+		
+	}
+
+	@Override
+	public void filler(StorageGui gui, AddonGuiItemsData item, GuiItem asGuiItem_item) {
+		
+		
+	}
+
+	@Override
+	public void filler(Gui gui, AddonGuiItemsData item, GuiItem asGuiItem_item) {
+		
+		
+	}
+
+	@Override
+	public ItemBuilder mountItem(AddonGuiItemsData item, UUID playerUUID, List<String> list) {
+		
+		return null;
+	}
+
+	@Override
+	public ItemBuilder mountItem(AddonGuiItemsData item, ItemStack base, UUID playerUUID, List<String> list) {
+		
+		return null;
+	}
+
+	@Override
+	public ItemBuilder createBaseItem(AddonGuiItemsData item, UUID playerUUID) {
+		
+		return null;
+	}
+
+	@Override
+	public ItemBuilder changeTooltip(ItemBuilder stack, boolean hideTooltip) {
+		
+		return null;
+	}
+
+	@Override
+	public ItemStack addItemFlag(ItemStack stack, ItemFlag flag) {
+		
+		return null;
 	}
 
 }
