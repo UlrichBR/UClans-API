@@ -38,16 +38,6 @@ public interface LibAPI {
 	String getDefaultBanner();
 
 	void setDefaultBanner(String defaultBanner);
-	
-	void resetTitle(Player p);
-	
-	void sendTitle(Player p, String msg, int fadeIn, int stay, int fadeOut);
-
-	void sendSubTitle(Player p, String msg, int fadeIn, int stay, int fadeOut);
-
-	void sendTitleSubTitle(Player p, String msg, String msg2, int fadeIn, int stay, int fadeOut);
-
-	void sendActionBar(Player p, String message);
 
 	String getPluginTag();
 	

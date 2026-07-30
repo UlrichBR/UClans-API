@@ -51,18 +51,6 @@ public class LibAPIManager implements LibAPI {
 		return null;
 	}
 	
-	@Override
-	public void sendTitle(Player p, String msg, int fadeIn, int stay, int fadeOut) {}
-	
-	@Override
-	public void sendSubTitle(Player p, String msg, int fadeIn, int stay, int fadeOut) {}
-	
-	@Override
-	public void sendTitleSubTitle(Player p, String msg, String msg2, int fadeIn, int stay, int fadeOut) {}
-	
-	@Override
-	public void sendActionBar(Player p, String message) {}
-	
 	public Clans getPlugin() {
 		return null;
 	}
@@ -131,11 +119,6 @@ public class LibAPIManager implements LibAPI {
 	public ConcurrentHashMap<UUID, MyScheduledTask> getLibTasks() {
 		
 		return null;
-	}
-
-	@Override
-	public void resetTitle(Player p) {
-		
 	}
 
 	@Override
