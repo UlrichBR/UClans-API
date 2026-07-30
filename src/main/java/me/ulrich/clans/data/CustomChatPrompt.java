@@ -1,7 +1,5 @@
 package me.ulrich.clans.data;
 
-
-
 import org.bukkit.entity.Player;
 import net.kyori.adventure.bossbar.BossBar;
 import java.util.ArrayList;
@@ -12,6 +10,7 @@ import java.util.function.Consumer;
 public class CustomChatPrompt {
 
     private final int durationSeconds;
+    private final boolean alertOnly;
     private final List<String> chatMessages;
     private final String actionBar;
     private final String title;
@@ -29,6 +28,7 @@ public class CustomChatPrompt {
 
     private CustomChatPrompt(Builder builder) {
         this.durationSeconds = builder.durationSeconds;
+        this.alertOnly = builder.alertOnly;
         this.chatMessages = builder.chatMessages;
         this.actionBar = builder.actionBar;
         this.title = builder.title;
@@ -43,8 +43,8 @@ public class CustomChatPrompt {
         this.bossBarAnimated = builder.bossBarAnimated;
     }
 
-    // Getters
     public int getDurationSeconds() { return durationSeconds; }
+    public boolean isAlertOnly() { return alertOnly; } 
     public List<String> getChatMessages() { return chatMessages; }
     public String getActionBar() { return actionBar; }
     public String getTitle() { return title; }
@@ -58,9 +58,9 @@ public class CustomChatPrompt {
     public BiConsumer<Player, String> getOnInputReceived() { return onInputReceived; }
     public Consumer<Player> getOnTimeoutOrCancel() { return onTimeoutOrCancel; }
 
-
 	public static class Builder {
         private int durationSeconds = 30;
+        private boolean alertOnly = false;
         private List<String> chatMessages = new ArrayList<>();
         private String actionBar, title, subtitle, bossBarText, sound;
         private BossBar.Color bossBarColor = BossBar.Color.RED;
@@ -71,6 +71,7 @@ public class CustomChatPrompt {
         private Consumer<Player> onTimeoutOrCancel;
 
         public Builder setDuration(int seconds) { this.durationSeconds = seconds; return this; }
+        public Builder setAlertOnly(boolean alertOnly) { this.alertOnly = alertOnly; return this; } // 5. Setter no Builder
         public Builder addChatMessage(String msg) { this.chatMessages.add(msg); return this; }
         public Builder setChatMessages(List<String> msgs) { this.chatMessages = msgs; return this; }
         public Builder setActionBar(String actionBar) { this.actionBar = actionBar; return this; }
@@ -90,7 +91,9 @@ public class CustomChatPrompt {
         public Builder onCancel(Consumer<Player> callback) { this.onTimeoutOrCancel = callback; return this; }
 
         public CustomChatPrompt build() {
-            if (onInputReceived == null) throw new IllegalStateException("O prompt precisa de uma ação de resposta!");
+            if (!alertOnly && onInputReceived == null) {
+                throw new IllegalStateException("O prompt precisa de uma ação de resposta quando não for configurado como alertOnly!");
+            }
             return new CustomChatPrompt(this);
         }
     }
