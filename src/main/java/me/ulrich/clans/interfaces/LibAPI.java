@@ -1,5 +1,6 @@
 package me.ulrich.clans.interfaces;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -18,6 +19,8 @@ import dev.triumphteam.gui.guis.GuiItem;
 import dev.triumphteam.gui.guis.PaginatedGui;
 import dev.triumphteam.gui.guis.StorageGui;
 import me.ulrich.clans.data.AddonGuiItemsData;
+import me.ulrich.clans.data.BossBarData;
+import me.ulrich.clans.data.CustomChatPrompt;
 import me.ulrich.clans.data.ClanEnum.TranslatableKey;
 import me.ulrich.clans.tasks.AsyncTaskExecutor;
 import net.kyori.adventure.bossbar.BossBar;
@@ -35,10 +38,6 @@ public interface LibAPI {
 	String getDefaultBanner();
 
 	void setDefaultBanner(String defaultBanner);
-	
-	void customBossBar(Player player, BossBar.Color barcolor, BossBar.Overlay barstyle, List<BossBar.Flag> flags, String message, int seconds, boolean animated, List<String> data);
-
-	void removeAllBar(UUID uuid);
 	
 	void resetTitle(Player p);
 	
@@ -62,13 +61,22 @@ public interface LibAPI {
 	
 	boolean isTaskInitialized();
 	
-	boolean hasBossbarTask(UUID playerUUID);
+	HashMap<UUID, BossBarData> getBossBarData();
 	
-	Optional<MyScheduledTask> getBossbarTask(UUID playerUUID);
+	void removeBar(UUID barUUID);
 	
-	boolean stopBossbarTask(UUID playerUUID);
+	void removeAllBar(UUID uuid);
 	
-	Optional<MyScheduledTask> createBossbarTask(UUID playerUUID, MyScheduledTask task);
+	void removeAllBar(Player player);
+	
+	void removeAllBar();
+	
+	UUID customBossBar(Player player, BossBar.Color barcolor, BossBar.Overlay barstyle,
+            List<BossBar.Flag> flags, String message, int seconds,
+            boolean animated, List<String> data);
+	
+	HashMap<UUID, MyScheduledTask> getActivetasks();
+
 	
 	boolean hasLibTask(UUID playerUUID);
 	
@@ -96,6 +104,8 @@ public interface LibAPI {
 
 	boolean playSound(Player p, String sound);
 	
+	// ADDONGUI
+	
 	void filler(PaginatedGui gui, AddonGuiItemsData item, GuiItem asGuiItem_item);
 	
 	void filler(StorageGui gui, AddonGuiItemsData item, GuiItem asGuiItem_item);
@@ -112,6 +122,16 @@ public interface LibAPI {
 	
 	ItemStack addItemFlag(ItemStack stack, ItemFlag flag);
 	
+	//CHAT
 	
+	boolean hasChat(Player player);
+	
+	boolean startChat(Player player, CustomChatPrompt prompt);
+	
+	void handleInput(Player player, String rawMessage);
+	
+	boolean cancelChat(Player player);
+	
+	boolean cancelChat(Player player, boolean triggerTimeoutCallback);
 	
 }

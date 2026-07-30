@@ -1,5 +1,6 @@
 package me.ulrich.clans.api;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -19,7 +20,9 @@ import dev.triumphteam.gui.guis.PaginatedGui;
 import dev.triumphteam.gui.guis.StorageGui;
 import me.ulrich.clans.Clans;
 import me.ulrich.clans.data.AddonGuiItemsData;
+import me.ulrich.clans.data.BossBarData;
 import me.ulrich.clans.data.ClanEnum.TranslatableKey;
+import me.ulrich.clans.data.CustomChatPrompt;
 import me.ulrich.clans.interfaces.LibAPI;
 import me.ulrich.clans.tasks.AsyncTaskExecutor;
 import net.kyori.adventure.bossbar.BossBar.Color;
@@ -81,29 +84,6 @@ public class LibAPIManager implements LibAPI {
 		return false;
 	}
 
-	@Override
-	public boolean hasBossbarTask(UUID playerUUID) {
-		
-		return false;
-	}
-
-	@Override
-	public Optional<MyScheduledTask> getBossbarTask(UUID playerUUID) {
-		
-		return Optional.empty();
-	}
-
-	@Override
-	public boolean stopBossbarTask(UUID playerUUID) {
-		
-		return false;
-	}
-
-	@Override
-	public Optional<MyScheduledTask> createBossbarTask(UUID playerUUID, MyScheduledTask task) {
-		
-		return Optional.empty();
-	}
 
 	@Override
 	public boolean hasLibTask(UUID playerUUID) {
@@ -193,11 +173,6 @@ public class LibAPIManager implements LibAPI {
 		
 	}
 
-	@Override
-	public void customBossBar(Player player, Color barcolor, Overlay barstyle, List<Flag> flags, String message,
-			int seconds, boolean animated, List<String> data) {
-		
-	}
 
 	@Override
 	public void removeAllBar(UUID uuid) {
@@ -265,6 +240,68 @@ public class LibAPIManager implements LibAPI {
 	public ItemStack addItemFlag(ItemStack stack, ItemFlag flag) {
 		
 		return null;
+	}
+
+	@Override
+	public HashMap<UUID, BossBarData> getBossBarData() {
+		
+		return null;
+	}
+
+	@Override
+	public void removeBar(UUID barUUID) {
+		
+		
+	}
+
+	@Override
+	public void removeAllBar(Player player) {
+		
+		
+	}
+
+	@Override
+	public void removeAllBar() {
+		
+		
+	}
+
+	@Override
+	public UUID customBossBar(Player player, Color barcolor, Overlay barstyle, List<Flag> flags, String message,
+			int seconds, boolean animated, List<String> data) {
+		
+		return null;
+	}
+
+	@Override
+	public HashMap<UUID, MyScheduledTask> getActivetasks() {
+		
+		return null;
+	}
+
+	@Override
+	public boolean hasChat(Player player) {
+		return false;
+	}
+
+	@Override
+	public boolean startChat(Player player, CustomChatPrompt prompt) {
+		return false;
+	}
+
+	@Override
+	public void handleInput(Player player, String rawMessage) {
+		
+	}
+
+	@Override
+	public boolean cancelChat(Player player) {
+		return false;
+	}
+
+	@Override
+	public boolean cancelChat(Player player, boolean triggerTimeoutCallback) {
+		return false;
 	}
 
 }
