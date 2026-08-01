@@ -57,6 +57,10 @@ public class ClanEnum {
 	    }
 	}
 	
+	public enum ClanStorage{
+		MYSQL, SQLITE, YAML;
+	}
+	
 	public enum DebugType {
 		SENT, RECEIVED, DISPATCH;
 	}
@@ -160,9 +164,7 @@ public class ClanEnum {
 		MYSQL, SQLITE;
 	}
 
-	public enum ClanStorage{
-		MYSQL, SQLITE, YAML, H2;
-	}
+
 	
 	public enum MsgUsage{
 		help, usage, error, success;

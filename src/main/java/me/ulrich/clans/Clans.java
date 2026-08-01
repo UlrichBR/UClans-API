@@ -17,11 +17,10 @@ import me.ulrich.clans.api.PlayerAPIManager;
 import me.ulrich.clans.api.PlayerInviteAPIManager;
 import me.ulrich.clans.data.Addon;
 import me.ulrich.clans.data.AddonInfo;
+import me.ulrich.clans.data.ClanEnum.ClanStorage;
 import me.ulrich.clans.data.Extension;
 import me.ulrich.clans.data.Module;
 import me.ulrich.clans.interfaces.UClans;
-import me.ulrich.clans.manager.DatabaseManager.DataEnum;
-import me.ulrich.clans.manager.IntegrationManager;
 
 public final class Clans extends JavaPlugin implements UClans{
 
@@ -29,7 +28,7 @@ public final class Clans extends JavaPlugin implements UClans{
 	private String language = "EN";
 	private String memberVersion = "NONE";
 	private boolean entity = false;
-	private DataEnum databaseType = DataEnum.YAML;
+	private ClanStorage databaseType = ClanStorage.YAML;
 	private boolean title_alerts = true;
 	private String serverName = "Clans";
 
@@ -49,8 +48,6 @@ public final class Clans extends JavaPlugin implements UClans{
 	private EntityAPIManager entityAPI;
 	private ColorAPIManager colorAPI;
 	private PlayerInviteAPIManager inviteAPI;
-	private IntegrationManager integrationManager;
-
 
 
 	public Clans() {
@@ -160,7 +157,7 @@ public final class Clans extends JavaPlugin implements UClans{
 		return memberVersion;
 	}
 
-	public DataEnum getDatabaseType() {
+	public ClanStorage getDatabaseType() {
 		return databaseType;
 	}
 
