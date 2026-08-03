@@ -27,6 +27,8 @@ public final class Clans extends JavaPlugin implements UClans{
 	private String buildVersion = "V9";
 	private String language = "EN";
 	private String memberVersion = "NONE";
+	private String timeZone = "America/Sao_Paulo";
+
 	private boolean entity = false;
 	private ClanStorage databaseType = ClanStorage.YAML;
 	private boolean title_alerts = true;
@@ -197,6 +199,10 @@ public final class Clans extends JavaPlugin implements UClans{
 
 	public String getLanguage() {
 		return language;
+	}
+
+	public String getTimeZone() {
+		return timeZone;
 	}
 
 

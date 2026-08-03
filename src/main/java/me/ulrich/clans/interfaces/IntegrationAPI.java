@@ -64,12 +64,24 @@ public interface IntegrationAPI {
     Optional<DiscordModuleAPI> getDiscordAPI();
     
     Optional<RewardsModuleAPI> getRewards();
-
+    
     Optional<MultiserverModuleAPI> getMultiserverAPI();
     
 	Optional<AnvilModuleAPI> getAnvilAPI();
 	
 	
+	// ==========================================
+	// ITEMP ARSE
+	// ==========================================
+
+	void registerItemParseAPI(String pluginName, ItemParseImplement api);
+
+	void unregisterItemParseAPI(String pluginName);
+	
+	Optional<ItemParseImplement> getItemParseAPI(String pluginName);
+
+	Optional<ItemParseImplement> getItemParseAPI();
+
 
 	// ==========================================
 	// SCOREBOARD

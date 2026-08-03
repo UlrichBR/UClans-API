@@ -16,6 +16,7 @@ import me.ulrich.clans.interfaces.GladiatorAddonAPI;
 import me.ulrich.clans.interfaces.HologramImplement;
 import me.ulrich.clans.interfaces.HomeModuleAPI;
 import me.ulrich.clans.interfaces.IntegrationAPI;
+import me.ulrich.clans.interfaces.ItemParseImplement;
 import me.ulrich.clans.interfaces.LandAddonAPI;
 import me.ulrich.clans.interfaces.LeaderboardAddonAPI;
 import me.ulrich.clans.interfaces.LeagueAddonAPI;
@@ -577,6 +578,28 @@ public class IntegrationAPIManager implements IntegrationAPI {
 		
 		return Optional.empty();
 	}
+
+	@Override
+	public void registerItemParseAPI(String pluginName, ItemParseImplement api) {
+		
+	}
+
+	@Override
+	public void unregisterItemParseAPI(String pluginName) {
+		
+	}
+
+	@Override
+	public Optional<ItemParseImplement> getItemParseAPI(String pluginName) {
+		return Optional.empty();
+	}
+
+	@Override
+	public Optional<ItemParseImplement> getItemParseAPI() {
+		return Optional.empty();
+	}
+
+
 
 
 
