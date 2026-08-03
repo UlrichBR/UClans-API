@@ -1,5 +1,6 @@
 package me.ulrich.clans.api;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -597,6 +598,11 @@ public class IntegrationAPIManager implements IntegrationAPI {
 	@Override
 	public Optional<ItemParseImplement> getItemParseAPI() {
 		return Optional.empty();
+	}
+
+	@Override
+	public List<ItemParseImplement> getItemParseAllImplemented() {
+		return null;
 	}
 
 

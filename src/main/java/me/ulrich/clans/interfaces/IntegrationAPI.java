@@ -1,5 +1,6 @@
 package me.ulrich.clans.interfaces;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -71,7 +72,7 @@ public interface IntegrationAPI {
 	
 	
 	// ==========================================
-	// ITEMP ARSE
+	// ITEM PARSE
 	// ==========================================
 
 	void registerItemParseAPI(String pluginName, ItemParseImplement api);
@@ -82,7 +83,8 @@ public interface IntegrationAPI {
 
 	Optional<ItemParseImplement> getItemParseAPI();
 
-
+	List<ItemParseImplement> getItemParseAllImplemented();
+	
 	// ==========================================
 	// SCOREBOARD
 	// ==========================================
