@@ -1,6 +1,7 @@
 package me.ulrich.clans.interfaces;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
@@ -29,8 +30,9 @@ public interface GuiAPI {
 	void close(Player player);
 
 	boolean useTitleAlerts();
-
 	
+	void registerLocalizedInsertItem(String guiId, String itemKey, Map<String, String> names, Map<String, List<String>> lore);
+
 	//GENERAL
 	void openChangeLeaderConfirm(final Player player, UUID newLEader, String title);
 

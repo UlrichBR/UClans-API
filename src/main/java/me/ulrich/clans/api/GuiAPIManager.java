@@ -1,6 +1,7 @@
 package me.ulrich.clans.api;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
@@ -150,6 +151,13 @@ public class GuiAPIManager implements GuiAPI {
 
 	@Override
 	public void openClanRolesEditor(Player player, int page, String id, String timed) {
+		
+	}
+
+	@Override
+	public void registerLocalizedInsertItem(String guiId, String itemKey, Map<String, String> names,
+			Map<String, List<String>> lore) {
+		// TODO Auto-generated method stub
 		
 	}
 }
