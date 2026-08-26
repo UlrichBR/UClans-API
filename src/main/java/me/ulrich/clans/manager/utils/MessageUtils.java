@@ -1,6 +1,7 @@
 package me.ulrich.clans.manager.utils;
 
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 import org.bukkit.command.CommandSender;
@@ -10,11 +11,16 @@ import me.ulrich.clans.data.ClanData;
 import me.ulrich.clans.data.ClanEnum.ChatDataType;
 import me.ulrich.clans.data.ClanEnum.MsgUsage;
 import me.ulrich.clans.data.CommandData;
+import me.ulrich.clans.data.CommandData_show;
 import net.kyori.adventure.text.Component;
 
 
 public class MessageUtils {
 
+	public static void registerLocalizedCommandShow(CommandData_show source, Map<String, CommandData_show> localized) {
+
+	}
+	
 	public static void sendCommandJson(CommandSender player, CommandData comander, MsgUsage key, List<String> data) {
 
 	}
