@@ -3,6 +3,7 @@ package me.ulrich.clans.api;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -367,8 +368,12 @@ public class ClanAPIManager implements ClanAPI {
 
 	@Override
 	public Optional<ClanData> createNewClan(UUID player, String tag, String desc, long date) {
-		// TODO Auto-generated method stub
 		return Optional.empty();
+	}
+
+	@Override
+	public Set<UUID> getChatspy() {
+		return null;
 	}
 
 	
